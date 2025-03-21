@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://sl40a0lvhiu"]
+
+[ext_resource type="Script" uid="uid://olexumjpkkp3" path="res://scripts/interactable_object.gd" id="1_2q6u7"]
+[ext_resource type="Texture2D" uid="uid://cymjode0admq7" path="res://icon.svg" id="2_kosse"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8xifs"]
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_2q6u7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_kosse")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(6.48, 6.48)
+shape = SubResource("RectangleShape2D_8xifs")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -19.0
+offset_top = 66.0
+offset_right = 21.0
+offset_bottom = 89.0

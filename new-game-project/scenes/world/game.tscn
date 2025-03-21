@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dljvbrq0i1mly"]
+
+[ext_resource type="Script" uid="uid://cuhpbyg8x5dvf" path="res://scripts/gameManager.gd" id="1_3iwug"]
+[ext_resource type="PackedScene" uid="uid://5tkxetqwyvuy" path="res://scenes/world/player.tscn" id="1_hqfqh"]
+[ext_resource type="PackedScene" uid="uid://sl40a0lvhiu" path="res://scenes/world/interactableObject.tscn" id="2_3iwug"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_3iwug")
+
+[node name="Player" parent="." instance=ExtResource("1_hqfqh")]
+position = Vector2(398, 219)
+
+[node name="Area2D" parent="." groups=["interactables"] instance=ExtResource("2_3iwug")]
+position = Vector2(128, 144)
+
+[node name="Area2D2" parent="." groups=["interactables"] instance=ExtResource("2_3iwug")]
+position = Vector2(967, 129)
