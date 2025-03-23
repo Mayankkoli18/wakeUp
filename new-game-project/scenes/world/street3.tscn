@@ -1,11 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://bxfupxmmcnwut"]
+[gd_scene load_steps=16 format=3 uid="uid://bxfupxmmcnwut"]
 
 [ext_resource type="Texture2D" uid="uid://bxfouy8wkprpg" path="res://assets/world/screenshot (3).png" id="1_8jvfg"]
 [ext_resource type="PackedScene" uid="uid://5tkxetqwyvuy" path="res://scenes/world/player.tscn" id="2_r15wo"]
 [ext_resource type="Script" uid="uid://dcbr2fjb3vyj6" path="res://scripts/sceneTransition.gd" id="3_r15wo"]
+[ext_resource type="Texture2D" uid="uid://dbysor012q526" path="res://assets/world/pet shop/Character/cat-white-idle.png" id="4_27mwf"]
 [ext_resource type="Texture2D" uid="uid://cymjode0admq7" path="res://icon.svg" id="4_xpr4e"]
 [ext_resource type="Script" uid="uid://futsnu754cq4" path="res://scripts/dog.gd" id="5_y4ghf"]
 [ext_resource type="PackedScene" uid="uid://d0dj8xo6r7nvc" path="res://scenes/UI/ClockUI.tscn" id="6_kua2d"]
+[ext_resource type="Script" uid="uid://olexumjpkkp3" path="res://scripts/interactable_object.gd" id="7_cecpb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ry7dn"]
 size = Vector2(145, 698)
@@ -16,7 +18,24 @@ size = Vector2(1232, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xpr4e"]
 size = Vector2(344, 20)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1u4c"]
+atlas = ExtResource("4_27mwf")
+region = Rect2(0, 0, 30, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lhypk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t1u4c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y4ghf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_27mwf"]
 
 [node name="Street1" type="Node2D"]
 
@@ -175,18 +194,19 @@ target_scene = "res://scenes/world/street4.tscn"
 position = Vector2(-13, -10)
 shape = SubResource("RectangleShape2D_xpr4e")
 
-[node name="Dog" type="Sprite2D" parent="."]
+[node name="Dog" type="AnimatedSprite2D" parent="."]
 z_index = 1
 position = Vector2(197, 537)
-scale = Vector2(0.352443, 0.377767)
-texture = ExtResource("4_xpr4e")
+scale = Vector2(1.59994, 1.64855)
+sprite_frames = SubResource("SpriteFrames_lhypk")
+frame_progress = 0.183878
 
-[node name="Area2D" type="Area2D" parent="Dog" node_paths=PackedStringArray("store_ui_label")]
+[node name="Area2D" type="Area2D" parent="Dog" node_paths=PackedStringArray("store_ui_label") groups=["tasks"]]
 script = ExtResource("5_y4ghf")
 store_ui_label = NodePath("../Label")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dog/Area2D"]
-scale = Vector2(6.33893, 5.89079)
+scale = Vector2(1.78708, 1.93714)
 shape = SubResource("RectangleShape2D_y4ghf")
 
 [node name="Label" type="Label" parent="Dog"]
@@ -200,3 +220,31 @@ scale = Vector2(1.98482, 1.93726)
 z_index = 290
 offset_top = 1.0
 offset_bottom = 1.0
+
+[node name="as31" type="Area2D" parent="."]
+z_index = 135
+position = Vector2(1050, 296)
+script = ExtResource("7_cecpb")
+scene_name = "res://scenes/world/street3.tscn"
+anomaly_id = "s"
+
+[node name="Sprite2D" type="Sprite2D" parent="as31"]
+scale = Vector2(0.147626, 0.17265)
+texture = ExtResource("4_xpr4e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="as31"]
+shape = SubResource("RectangleShape2D_27mwf")
+
+[node name="as32" type="Area2D" parent="."]
+z_index = 135
+position = Vector2(1049, 394)
+script = ExtResource("7_cecpb")
+scene_name = "res://scenes/world/street3.tscn"
+anomaly_id = "ss"
+
+[node name="Sprite2D" type="Sprite2D" parent="as32"]
+scale = Vector2(0.147626, 0.17265)
+texture = ExtResource("4_xpr4e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="as32"]
+shape = SubResource("RectangleShape2D_27mwf")

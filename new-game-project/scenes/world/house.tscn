@@ -681,7 +681,7 @@ texture = ExtResource("6_oi0cb")
 position = Vector2(569.5, 189.25)
 shape = SubResource("RectangleShape2D_lyc04")
 
-[node name="planttask" type="Area2D" parent="Node/walls"]
+[node name="planttask" type="Area2D" parent="Node/walls" groups=["tasks"]]
 script = ExtResource("10_5sssf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node/walls/planttask"]

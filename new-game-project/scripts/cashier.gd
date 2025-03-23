@@ -14,3 +14,5 @@ func buy_dog_food():
 		TaskManager.complete_task("buy_dog_food")
 		store_ui_label.text = "Thank You come back today c: "  # Show text under clock
 	
+func reset_task():
+	has_dog_food = false

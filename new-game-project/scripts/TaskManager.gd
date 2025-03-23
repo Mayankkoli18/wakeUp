@@ -7,6 +7,7 @@ var task_order = ["water_plants", "clear_trash", "buy_dog_food", "feed_dog", "si
 var current_task_index = 0
 const TOTAL_TASKS = 5;
 func complete_task(task_name):
+	print(current_task_index)
 	if task_name == task_order[current_task_index]:  # Only complete if it's the correct task
 		completed_tasks.append(task_name)
 		current_task_index += 1  # Move to the next task

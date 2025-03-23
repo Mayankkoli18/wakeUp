@@ -26,6 +26,5 @@ func _on_watering_completed():
 	self.hide()  # Hide the WateringSpot so it can't be clicked again
 func reset_task():
 	task_completed = false
-	self.show()  # Make WateringSpot clickable again
-	if watering_ui:
-		watering_ui.reset_ui()  # Reset UI state
+	self.show()  # Show watering spot again
+	watering_ui.reset_ui()  # Reset UI

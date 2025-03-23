@@ -19,10 +19,12 @@ config/icon="res://icon.svg"
 
 ClockManager="*res://scripts/ClockManager.gd"
 TaskManager="*res://scripts/TaskManager.gd"
+GameManager="*res://scripts/gameManager.gd"
 
 [global_group]
 
 player=""
+tasks=""
 
 [input]
 

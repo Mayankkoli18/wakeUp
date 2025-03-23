@@ -1622,8 +1622,6 @@ shape = SubResource("RectangleShape2D_gppj7")
 z_index = 135
 position = Vector2(925, 414)
 script = ExtResource("12_0l2hq")
-scene_name = "res://scenes/world/garden.tscn"
-anomaly_id = "g"
 
 [node name="Sprite2D" type="Sprite2D" parent="ag1"]
 scale = Vector2(0.147626, 0.17265)
@@ -1634,10 +1632,8 @@ shape = SubResource("RectangleShape2D_8ec07")
 
 [node name="ag2" type="Area2D" parent="."]
 z_index = 135
-position = Vector2(921, 530)
+position = Vector2(925, 414)
 script = ExtResource("12_0l2hq")
-scene_name = "res://scenes/world/garden.tscn"
-anomaly_id = "gg"
 
 [node name="Sprite2D" type="Sprite2D" parent="ag2"]
 scale = Vector2(0.147626, 0.17265)

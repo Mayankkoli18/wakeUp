@@ -5,7 +5,7 @@ extends Area2D
 
 var task_completed = false
 var cutscene_texts = [
-	"Still smells like her.",
+	"This place still smells like her.",
 	"Do I miss her?",
 	"Do I remember her?"
 ]

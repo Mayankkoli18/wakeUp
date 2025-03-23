@@ -10,3 +10,6 @@ func advance_time():
 		var time_step = (END_TIME - 8) / float(MAX_TASKS)  # Distribute time evenly
 		time += int(time_step)  # Convert to integer
 		time_updated.emit(time)  # Notify UI
+func reset_task():
+	time = 8
+	time_updated.emit(time)  # Notify UI

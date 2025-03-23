@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://b3vdjfnlbd05d"]
+[gd_scene load_steps=12 format=3 uid="uid://b3vdjfnlbd05d"]
 
 [ext_resource type="Texture2D" uid="uid://bxfouy8wkprpg" path="res://assets/world/screenshot (3).png" id="1_hf0qi"]
 [ext_resource type="PackedScene" uid="uid://5tkxetqwyvuy" path="res://scenes/world/player.tscn" id="2_slt4x"]
 [ext_resource type="PackedScene" uid="uid://d0dj8xo6r7nvc" path="res://scenes/UI/ClockUI.tscn" id="3_6kiam"]
 [ext_resource type="Script" uid="uid://dcbr2fjb3vyj6" path="res://scripts/sceneTransition.gd" id="3_slt4x"]
+[ext_resource type="Script" uid="uid://olexumjpkkp3" path="res://scripts/interactable_object.gd" id="5_1dqnq"]
+[ext_resource type="Texture2D" uid="uid://cymjode0admq7" path="res://icon.svg" id="6_juhdx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ry7dn"]
 size = Vector2(145, 698)
@@ -16,6 +18,8 @@ size = Vector2(412, 22)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rkupa"]
 size = Vector2(20, 272)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v034i"]
 
 [node name="Street1" type="Node2D"]
 
@@ -169,3 +173,31 @@ target_scene = "res://scenes/world/street1.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
 shape = SubResource("RectangleShape2D_rkupa")
+
+[node name="as21" type="Area2D" parent="."]
+z_index = 135
+position = Vector2(931, 313)
+script = ExtResource("5_1dqnq")
+scene_name = "res://scenes/world/street2.tscn"
+anomaly_id = "a"
+
+[node name="Sprite2D" type="Sprite2D" parent="as21"]
+scale = Vector2(0.147626, 0.17265)
+texture = ExtResource("6_juhdx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="as21"]
+shape = SubResource("RectangleShape2D_v034i")
+
+[node name="as22" type="Area2D" parent="."]
+z_index = 135
+position = Vector2(925, 414)
+script = ExtResource("5_1dqnq")
+scene_name = "res://scenes/world/street2.tscn"
+anomaly_id = "aa"
+
+[node name="Sprite2D" type="Sprite2D" parent="as22"]
+scale = Vector2(0.147626, 0.17265)
+texture = ExtResource("6_juhdx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="as22"]
+shape = SubResource("RectangleShape2D_v034i")

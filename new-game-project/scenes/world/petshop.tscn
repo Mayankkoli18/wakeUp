@@ -1,12 +1,23 @@
-[gd_scene load_steps=10 format=3 uid="uid://c45ih8g0ym82s"]
+[gd_scene load_steps=23 format=3 uid="uid://c45ih8g0ym82s"]
 
 [ext_resource type="PackedScene" uid="uid://5tkxetqwyvuy" path="res://scenes/world/player.tscn" id="1_1dulc"]
 [ext_resource type="Texture2D" uid="uid://cymjode0admq7" path="res://icon.svg" id="2_m66gv"]
+[ext_resource type="Texture2D" uid="uid://dbysor012q526" path="res://assets/world/pet shop/Character/cat-white-idle.png" id="2_tymok"]
 [ext_resource type="Script" uid="uid://3lehoggt3i0y" path="res://scripts/cashier.gd" id="3_m66gv"]
 [ext_resource type="PackedScene" uid="uid://d0dj8xo6r7nvc" path="res://scenes/UI/ClockUI.tscn" id="3_rs1fv"]
 [ext_resource type="Script" uid="uid://dcbr2fjb3vyj6" path="res://scripts/sceneTransition.gd" id="5_rs1fv"]
+[ext_resource type="Script" uid="uid://olexumjpkkp3" path="res://scripts/interactable_object.gd" id="6_fmkfa"]
+[ext_resource type="Texture2D" uid="uid://cgy8a7npk358k" path="res://assets/world/pet shop/furniture-2.png" id="8_al6xc"]
+[ext_resource type="Texture2D" uid="uid://dm5qthw4yj4yd" path="res://assets/world/pet shop/furniture.png" id="9_wep76"]
+[ext_resource type="Texture2D" uid="uid://c66jbgnjqtla3" path="res://assets/world/pet shop/tilemap.png" id="10_ferr8"]
+[ext_resource type="Texture2D" uid="uid://qophnlf3mtw3" path="res://assets/world/pet shop/cat-in-a-box.png" id="11_v7gtw"]
+[ext_resource type="Texture2D" uid="uid://cf4ejmx6x2f5k" path="res://assets/world/pet shop/food.png" id="12_fx1b4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tymok"]
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rs1fv"]
+size = Vector2(17.6682, 18.5349)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fmkfa"]
 size = Vector2(932, 20)
@@ -16,6 +27,37 @@ size = Vector2(145, 698)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gr7y8"]
 size = Vector2(1232, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ltg5f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2tswe"]
+atlas = ExtResource("11_v7gtw")
+region = Rect2(0, 0, 32, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3qb2"]
+atlas = ExtResource("11_v7gtw")
+region = Rect2(32, 0, 32, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_js5yf"]
+atlas = ExtResource("11_v7gtw")
+region = Rect2(64, 0, 32, 31)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1ycgb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2tswe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a3qb2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_js5yf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Petshop" type="Node2D"]
 
@@ -30,23 +72,28 @@ offset_bottom = 40.0
 
 [node name="Label" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 542.0
-offset_top = 170.0
-offset_right = 636.0
-offset_bottom = 193.0
+offset_left = 509.0
+offset_top = 0.999997
+offset_right = 603.0
+offset_bottom = 24.0
 scale = Vector2(1.35403, 1.48199)
-text = "THE USUAL?"
+text = "Click to buy Food"
+label_settings = SubResource("LabelSettings_tymok")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(600, 91)
-texture = ExtResource("2_m66gv")
+position = Vector2(595, 97)
+scale = Vector2(2.77795, 2.42597)
+texture = ExtResource("2_tymok")
+region_enabled = true
+region_rect = Rect2(0, 0, 32.485, 28)
 
-[node name="Area2D" type="Area2D" parent="Sprite2D" node_paths=PackedStringArray("store_ui_label")]
+[node name="Area2D" type="Area2D" parent="Sprite2D" node_paths=PackedStringArray("store_ui_label") groups=["tasks"]]
 script = ExtResource("3_m66gv")
 store_ui_label = NodePath("../../Control/Label")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
-scale = Vector2(6.30596, 6.1945)
+position = Vector2(-7.35205, -4.53772)
+scale = Vector2(1.67689, 2.25926)
 shape = SubResource("RectangleShape2D_rs1fv")
 
 [node name="ClockUi" parent="." instance=ExtResource("3_rs1fv")]
@@ -79,3 +126,129 @@ shape = SubResource("RectangleShape2D_gr7y8")
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="Area2D/StaticBody2D"]
 position = Vector2(576, 672)
 shape = SubResource("RectangleShape2D_gr7y8")
+
+[node name="ap1" type="Area2D" parent="."]
+z_index = 135
+position = Vector2(925, 414)
+script = ExtResource("6_fmkfa")
+scene_name = "res://scenes/world/petshop.tscn"
+anomaly_id = "p"
+
+[node name="Sprite2D" type="Sprite2D" parent="ap1"]
+scale = Vector2(0.147626, 0.17265)
+texture = ExtResource("2_m66gv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ap1"]
+shape = SubResource("RectangleShape2D_ltg5f")
+
+[node name="ap2" type="Area2D" parent="."]
+z_index = 135
+position = Vector2(827, 457)
+script = ExtResource("6_fmkfa")
+scene_name = "res://scenes/world/petshop.tscn"
+anomaly_id = "pp"
+
+[node name="Sprite2D" type="Sprite2D" parent="ap2"]
+scale = Vector2(0.147626, 0.17265)
+texture = ExtResource("2_m66gv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ap2"]
+shape = SubResource("RectangleShape2D_ltg5f")
+
+[node name="env" type="Node" parent="."]
+
+[node name="Furniture-2" type="Sprite2D" parent="."]
+position = Vector2(-516, 434)
+texture = ExtResource("8_al6xc")
+
+[node name="Furniture-4" type="Sprite2D" parent="."]
+position = Vector2(138, 297)
+scale = Vector2(0.761194, 0.859223)
+texture = ExtResource("8_al6xc")
+region_enabled = true
+region_rect = Rect2(176, 128, 134, 103)
+
+[node name="Furniture-5" type="Sprite2D" parent="."]
+position = Vector2(201, 376)
+scale = Vector2(0.761194, 0.859223)
+texture = ExtResource("8_al6xc")
+region_enabled = true
+region_rect = Rect2(176, 128, 134, 103)
+
+[node name="Furniture-6" type="Sprite2D" parent="."]
+position = Vector2(91, 399)
+scale = Vector2(0.761194, 0.859223)
+texture = ExtResource("8_al6xc")
+region_enabled = true
+region_rect = Rect2(176, 128, 134, 103)
+
+[node name="Furniture-7" type="Sprite2D" parent="."]
+position = Vector2(783, 125)
+scale = Vector2(0.761194, 0.859223)
+texture = ExtResource("8_al6xc")
+region_enabled = true
+region_rect = Rect2(361, -12, 99, 140)
+
+[node name="Furniture-8" type="Sprite2D" parent="."]
+position = Vector2(900, 160)
+scale = Vector2(0.761194, 0.859223)
+texture = ExtResource("8_al6xc")
+region_enabled = true
+region_rect = Rect2(361, -12, 99, 140)
+
+[node name="Furniture-3" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(562.5, 322.5)
+scale = Vector2(65.7222, 85.125)
+texture = ExtResource("8_al6xc")
+region_enabled = true
+region_rect = Rect2(234, 174, 18, 8)
+
+[node name="Furniture" type="Sprite2D" parent="."]
+position = Vector2(-1130, 467)
+scale = Vector2(3.94062, 4.90492)
+texture = ExtResource("9_wep76")
+
+[node name="Furniture2" type="Sprite2D" parent="."]
+position = Vector2(592, 101)
+scale = Vector2(3.94062, 4.90492)
+texture = ExtResource("9_wep76")
+region_enabled = true
+region_rect = Rect2(58, 88, 77, 36)
+
+[node name="Tilemap" type="Sprite2D" parent="."]
+position = Vector2(-700, 28)
+texture = ExtResource("10_ferr8")
+
+[node name="Cat-in-a-box" type="AnimatedSprite2D" parent="."]
+position = Vector2(780, 86)
+scale = Vector2(2.08065, 2.08065)
+sprite_frames = SubResource("SpriteFrames_1ycgb")
+autoplay = "default"
+frame_progress = 0.639058
+
+[node name="Cat-in-a-box2" type="AnimatedSprite2D" parent="."]
+position = Vector2(895, 124)
+scale = Vector2(2.08065, 2.08065)
+sprite_frames = SubResource("SpriteFrames_1ycgb")
+autoplay = "default"
+frame_progress = 0.134747
+
+[node name="Cat-in-a-box3" type="AnimatedSprite2D" parent="."]
+position = Vector2(975, 77)
+rotation = -0.0218296
+scale = Vector2(2.08065, 2.08065)
+sprite_frames = SubResource("SpriteFrames_1ycgb")
+autoplay = "default"
+frame_progress = 0.134747
+
+[node name="Cat-in-a-box4" type="AnimatedSprite2D" parent="."]
+position = Vector2(143, 288)
+rotation = -0.0218296
+scale = Vector2(-1.26151, 1.44307)
+sprite_frames = SubResource("SpriteFrames_1ycgb")
+frame_progress = 0.134747
+
+[node name="Food" type="Sprite2D" parent="."]
+position = Vector2(-1450, 111)
+texture = ExtResource("12_fx1b4")

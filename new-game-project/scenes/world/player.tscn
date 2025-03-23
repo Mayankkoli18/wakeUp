@@ -199,15 +199,15 @@ animations = [{
 
 [node name="Player" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["player"]]
+[node name="Player" type="CharacterBody2D" parent="." groups=["player"]]
 scale = Vector2(2.89815, 2.89815)
 script = ExtResource("1_tk5el")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(-1.38019, 7.76038)
 shape = SubResource("RectangleShape2D_hqqc5")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
 position = Vector2(-1.005, 0)
 sprite_frames = SubResource("SpriteFrames_w5ocb")
 animation = &"Idle"

@@ -18,3 +18,5 @@ func feed_dog():
 	# If both buy & feed tasks are done, then skip time
 	if TaskManager.is_task_completed("buy_dog_food") and TaskManager.is_task_completed("feed_dog"):
 		ClockManager.advance_time()  # Skip time only when both are done
+func reset_task():
+	is_fed = false

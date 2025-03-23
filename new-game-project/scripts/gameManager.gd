@@ -1,29 +1,69 @@
 extends Node
 
-var day = 0  # Track in-game day
-var anomaly_count = 0  # Track how many anomalies have occurred
+var day = 0  # Current in-game day
+var anomalies_found = 0  # Number of discrepancies found
 
-# Function to progress the day
+var active_anomalies = {}  # Stores current anomaliess
+var discovered_anomalies = {}  
+@onready var sleep_sprite = $SleepSprite  # Assign in editor
+@onready var discrepancy_sprite = $DiscrepancySprite  # Assign in editor
+@onready var sleep_label = $SleepLabel  # Label for messages
+
+signal day_started  # Notify other scripts when the day resets
+
+#dd
+
+# 🚀 Called when player enters the bed area
+func start_sleep_cycle():
+	if anomalies_found > 0:  # If an anomaly was discovered today
+		show_discrepancy_effect()
+	else:
+		begin_normal_sleep()
+
+# 🚨 Show discrepancy sprite first
+func show_discrepancy_effect():
+	discrepancy_sprite.visible = true
+	sleep_label.visible = true
+	sleep_label.text = "Something feels... off."
+
+	await get_tree().create_timer(3.0).timeout  # Wait for 3 seconds
+
+	discrepancy_sprite.visible = false  # Hide discrepancy sprite
+	sleep_label.visible = false
+
+	begin_normal_sleep()
+
+# 😴 Normal sleep transition
+func begin_normal_sleep():
+	sleep_sprite.visible = true
+	sleep_sprite.modulate.a = 0  # Start transparent
+	sleep_sprite.modulate.a = 1  # Fade in effect
+	await get_tree().create_timer(3.0).timeout  # Wait for 3 seconds
+
+	sleep_sprite.visible = false
+	next_day()
+
+# 🌞 Move to next day
 func next_day():
 	day += 1
-	anomaly_count += 1  # Increase the number of anomalies
-	var objects = get_tree().get_nodes_in_group("interactables")
 
-	# Reset all objects to normal first
-	for obj in objects:
-		obj.is_anomaly = false  # Clear previous anomalies
-		obj.day_variable = day  # Update day variable
+	# Reset tasks
+	reset_tasks()
+	day_started.emit()
 
-	# Pick one random object to be an anomaly today
-	if anomaly_count <= 5:  # We have 5 anomalies in total
-		var random_object = objects.pick_random()
-		random_object.set_anomaly()  # Set it as an anomaly
+func anomaly_found(scene_name):
+	anomalies_found += 1
+	print("🔴 Anomaly Found in", scene_name)
+	
+	# If the player detects at least 1 anomaly, progress the day
+	if anomalies_found >= 1:
+		await get_tree().create_timer(1.5).timeout  # Small delay before transitioning
 
-	print("Day:", day, "Anomalies so far:", anomaly_count)
+
+
+# ✅ Reset tasks for the new day
 func reset_tasks():
-	$WateringSpot.show()  # Show WateringSpot again
-	$WateringUI.reset_ui()  # Reset plant buttons for the next day
-	get_node("res://scenes/world/garden.tscn").reset_trash()
-func _process(delta):
-	if Input.is_action_just_pressed("dd"):
-		next_day()
+	get_tree().call_group("tasks", "reset_task")  # Call reset_task() for all tasks
+	ClockManager.reset_task()
+
+	print("All tasks reset for the new day!")
