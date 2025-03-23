@@ -11,6 +11,15 @@ var cutscene_texts = [
 ]
 
 func _ready():
+
+	# Ensure that get_tree() is called after scene is ready
+	var tree = get_tree()
+	if tree:
+		# Safe to use the scene tree here
+		print("Scene tree is available.")
+	else:
+		print("Scene tree is not ready yet.")
+
 	if cutscene_sprite:
 		cutscene_sprite.visible = false
 		cutscene_sprite.modulate = Color(1, 1, 1, 0)  # Fully transparent initially

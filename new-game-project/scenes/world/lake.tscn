@@ -10,7 +10,7 @@
 [ext_resource type="Script" uid="uid://dcbr2fjb3vyj6" path="res://scripts/sceneTransition.gd" id="8_l3khs"]
 [ext_resource type="PackedScene" uid="uid://d0dj8xo6r7nvc" path="res://scenes/UI/ClockUI.tscn" id="9_dpwqf"]
 [ext_resource type="Script" uid="uid://olexumjpkkp3" path="res://scripts/interactable_object.gd" id="10_57stc"]
-[ext_resource type="Texture2D" uid="uid://cymjode0admq7" path="res://icon.svg" id="11_k0x8r"]
+[ext_resource type="Texture2D" uid="uid://bfidf0jvxdpxy" path="res://assets/sprites/playerSpriteSheet.png" id="11_57stc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nhwmj"]
 size = Vector2(76, 20)
@@ -222,13 +222,6 @@ texture = ExtResource("2_h8r6p")
 region_enabled = true
 region_rect = Rect2(0, -1, 32, 64)
 
-[node name="Background25" type="Sprite2D" parent="Node"]
-position = Vector2(646, 429)
-scale = Vector2(2.22609, 2.22609)
-texture = ExtResource("2_h8r6p")
-region_enabled = true
-region_rect = Rect2(0, -1, 32, 64)
-
 [node name="Background2" type="Sprite2D" parent="Node"]
 position = Vector2(87, 375)
 texture = ExtResource("2_h8r6p")
@@ -390,6 +383,30 @@ offset_right = -186.0
 offset_bottom = 172.0
 text = "OREWAMONKEY D LUFFY "
 
+[node name="TilesetB2" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(561, 471)
+texture = ExtResource("4_vlqls")
+region_enabled = true
+region_rect = Rect2(674, 621, 87, 48)
+
+[node name="Area2D" type="Area2D" parent="TilesetB2" node_paths=PackedStringArray("cutscene_sprite", "cutscene_label")]
+script = ExtResource("5_nhwmj")
+cutscene_sprite = NodePath("../../Nightsky")
+cutscene_label = NodePath("../Label")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TilesetB2/Area2D"]
+shape = SubResource("RectangleShape2D_nhwmj")
+
+[node name="Label" type="Label" parent="TilesetB2"]
+visible = false
+z_index = 4
+offset_left = -553.0
+offset_top = 61.0
+offset_right = -186.0
+offset_bottom = 172.0
+text = "OREWAMONKEY D LUFFY "
+
 [node name="Player" parent="." groups=["player"] instance=ExtResource("5_tthbd")]
 z_index = 2
 position = Vector2(45, 457)
@@ -435,30 +452,38 @@ shape = SubResource("RectangleShape2D_cq6wy")
 
 [node name="al1" type="Area2D" parent="."]
 z_index = 135
-position = Vector2(925, 414)
+position = Vector2(1115, 382)
+scale = Vector2(3.44293, 2.86915)
 script = ExtResource("10_57stc")
 scene_name = "res://scenes/world/lake.tscnsd"
 anomaly_id = "l"
 
-[node name="Sprite2D" type="Sprite2D" parent="al1"]
-scale = Vector2(0.147626, 0.17265)
-texture = ExtResource("11_k0x8r")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="al1"]
 shape = SubResource("RectangleShape2D_u1q3f")
 
+[node name="Background25" type="Sprite2D" parent="al1"]
+position = Vector2(1.16181, -2.78828)
+scale = Vector2(0.403414, 0.472658)
+texture = ExtResource("2_h8r6p")
+region_enabled = true
+region_rect = Rect2(0, -1, 32, 64)
+
 [node name="al2" type="Area2D" parent="."]
 z_index = 135
-position = Vector2(925, 414)
+position = Vector2(733, 585)
+scale = Vector2(2.94737, 2.51124)
 script = ExtResource("10_57stc")
 scene_name = "res://scenes/world/lake.tscnsd"
 anomaly_id = "ll"
 
 [node name="Sprite2D" type="Sprite2D" parent="al2"]
-scale = Vector2(0.147626, 0.17265)
-texture = ExtResource("11_k0x8r")
+scale = Vector2(1.06224, 1.18688)
+texture = ExtResource("11_57stc")
+region_enabled = true
+region_rect = Rect2(70, 6, 20, 25)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="al2"]
 shape = SubResource("RectangleShape2D_u1q3f")
 
 [connection signal="body_entered" from="TilesetB/Area2D" to="TilesetB/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="TilesetB2/Area2D" to="TilesetB2/Area2D" method="_on_body_entered"]

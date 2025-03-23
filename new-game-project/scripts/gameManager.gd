@@ -2,7 +2,8 @@ extends Node
 
 var day = 0  # Current in-game day
 var anomalies_found = 0  # Number of discrepancies found
-
+var anamoliesCount = 0
+var anomalytoday=false;
 var active_anomalies = {}  # Stores current anomaliess
 var discovered_anomalies = {}  
 @onready var sleep_sprite = $SleepSprite  # Assign in editor
@@ -19,7 +20,7 @@ func start_sleep_cycle():
 		show_discrepancy_effect()
 	else:
 		begin_normal_sleep()
-
+var i=0
 # 🚨 Show discrepancy sprite first
 func show_discrepancy_effect():
 	discrepancy_sprite.visible = true
@@ -53,17 +54,21 @@ func next_day():
 
 func anomaly_found(scene_name):
 	anomalies_found += 1
+	anomalytoday=true;
 	print("🔴 Anomaly Found in", scene_name)
-	
+	print(anamoliesCount)
 	# If the player detects at least 1 anomaly, progress the day
 	if anomalies_found >= 1:
 		await get_tree().create_timer(1.5).timeout  # Small delay before transitioning
+	else:
+		pass
 
-
-
+var resett=false
 # ✅ Reset tasks for the new day
 func reset_tasks():
-	get_tree().call_group("tasks", "reset_task")  # Call reset_task() for all tasks
-	ClockManager.reset_task()
-
-	print("All tasks reset for the new day!")
+	if get_tree():
+		get_tree().call_group("tasks", "reset_task") 
+	else:
+		resett=true 
+	
+		

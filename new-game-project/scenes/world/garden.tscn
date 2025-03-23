@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://i2facsgb6wbv"]
+[gd_scene load_steps=24 format=3 uid="uid://i2facsgb6wbv"]
 
 [ext_resource type="Texture2D" uid="uid://bxfouy8wkprpg" path="res://assets/world/screenshot (3).png" id="1_3nnvf"]
 [ext_resource type="Texture2D" uid="uid://b2il3ie4k4rdo" path="res://assets/world/tree.png" id="1_dywpw"]
@@ -8,10 +8,14 @@
 [ext_resource type="Texture2D" uid="uid://oj77dfmtirv6" path="res://assets/world/house and outdoor decorations/Background.png" id="6_gc4fa"]
 [ext_resource type="Script" uid="uid://dtqye78sb3jge" path="res://scripts/trashManager.gd" id="7_d2die"]
 [ext_resource type="Script" uid="uid://cxkxawoiansah" path="res://scripts/trash.gd" id="8_hjpdx"]
-[ext_resource type="Texture2D" uid="uid://cymjode0admq7" path="res://icon.svg" id="9_np1m0"]
+[ext_resource type="Texture2D" uid="uid://dntvhtw8undem" path="res://assets/world/trash/snack.png" id="9_nnonp"]
+[ext_resource type="Texture2D" uid="uid://312hrvstd5gs" path="res://assets/world/trash/magazine.png" id="10_fm7sl"]
 [ext_resource type="PackedScene" uid="uid://d0dj8xo6r7nvc" path="res://scenes/UI/ClockUI.tscn" id="10_hjpdx"]
+[ext_resource type="Texture2D" uid="uid://dygx2ejvj7xaa" path="res://assets/world/trash/tshirt.png" id="11_54xm6"]
 [ext_resource type="Script" uid="uid://dcbr2fjb3vyj6" path="res://scripts/sceneTransition.gd" id="11_np1m0"]
 [ext_resource type="Script" uid="uid://olexumjpkkp3" path="res://scripts/interactable_object.gd" id="12_0l2hq"]
+[ext_resource type="Texture2D" uid="uid://c3ejp4y40yqlh" path="res://assets/world/trash/oldmagazine.png" id="12_t7q8v"]
+[ext_resource type="Texture2D" uid="uid://c8vib1u346f8x" path="res://assets/world/trash/patchwork.png" id="13_jkcbh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ry7dn"]
 size = Vector2(161.5, 698)
@@ -32,6 +36,7 @@ size = Vector2(30, 28)
 size = Vector2(62, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ec07"]
+size = Vector2(46, 27)
 
 [node name="Street1" type="Node2D"]
 
@@ -152,7 +157,7 @@ scale = Vector2(1.6797, 1.6797)
 texture = ExtResource("1_dywpw")
 
 [node name="Sprite2D" type="Sprite2D" parent="Node"]
-position = Vector2(577, 325)
+position = Vector2(562, 320)
 scale = Vector2(28.9, 20.3125)
 texture = ExtResource("1_3nnvf")
 region_enabled = true
@@ -1548,8 +1553,9 @@ shape = SubResource("RectangleShape2D_0l2hq")
 
 [node name="Sprite2D" type="Sprite2D" parent="TrashContainer/Area2D"]
 position = Vector2(-0.5, 0)
-scale = Vector2(0.242188, 0.234375)
-texture = ExtResource("9_np1m0")
+rotation = 0.951074
+scale = Vector2(0.077519, 0.0549874)
+texture = ExtResource("9_nnonp")
 
 [node name="Area2D2" type="Area2D" parent="TrashContainer" node_paths=PackedStringArray("task_manager") groups=["tasks"]]
 position = Vector2(807, 536)
@@ -1562,8 +1568,8 @@ shape = SubResource("RectangleShape2D_0l2hq")
 
 [node name="Sprite2D" type="Sprite2D" parent="TrashContainer/Area2D2"]
 position = Vector2(-0.5, 0)
-scale = Vector2(0.242188, 0.234375)
-texture = ExtResource("9_np1m0")
+scale = Vector2(0.0575123, 0.0545013)
+texture = ExtResource("10_fm7sl")
 
 [node name="Area2D3" type="Area2D" parent="TrashContainer" node_paths=PackedStringArray("task_manager") groups=["tasks"]]
 position = Vector2(970, 504)
@@ -1576,8 +1582,9 @@ shape = SubResource("RectangleShape2D_0l2hq")
 
 [node name="Sprite2D" type="Sprite2D" parent="TrashContainer/Area2D3"]
 position = Vector2(-0.5, 0)
-scale = Vector2(0.242188, 0.234375)
-texture = ExtResource("9_np1m0")
+rotation = 1.1512
+scale = Vector2(0.0434451, 0.0585329)
+texture = ExtResource("11_54xm6")
 
 [node name="Area2D4" type="Area2D" parent="TrashContainer" node_paths=PackedStringArray("task_manager") groups=["tasks"]]
 position = Vector2(133, 540)
@@ -1590,8 +1597,9 @@ shape = SubResource("RectangleShape2D_0l2hq")
 
 [node name="Sprite2D" type="Sprite2D" parent="TrashContainer/Area2D4"]
 position = Vector2(-0.5, 0)
-scale = Vector2(0.242188, 0.234375)
-texture = ExtResource("9_np1m0")
+rotation = -0.902448
+scale = Vector2(0.0726948, 0.0606775)
+texture = ExtResource("12_t7q8v")
 
 [node name="Area2D5" type="Area2D" parent="TrashContainer" node_paths=PackedStringArray("task_manager") groups=["tasks"]]
 position = Vector2(572, 377)
@@ -1604,8 +1612,8 @@ shape = SubResource("RectangleShape2D_0l2hq")
 
 [node name="Sprite2D" type="Sprite2D" parent="TrashContainer/Area2D5"]
 position = Vector2(-0.5, 0)
-scale = Vector2(0.242188, 0.234375)
-texture = ExtResource("9_np1m0")
+scale = Vector2(0.0559673, 0.05355)
+texture = ExtResource("13_jkcbh")
 
 [node name="ClockUi" parent="." instance=ExtResource("10_hjpdx")]
 z_index = 7
@@ -1620,14 +1628,18 @@ shape = SubResource("RectangleShape2D_gppj7")
 
 [node name="ag1" type="Area2D" parent="."]
 z_index = 135
-position = Vector2(925, 414)
+position = Vector2(552, 291)
 script = ExtResource("12_0l2hq")
 scene_name = "res://scenes/world/garden.tscn"
 anomaly_id = "g"
 
-[node name="Sprite2D" type="Sprite2D" parent="ag1"]
-scale = Vector2(0.147626, 0.17265)
-texture = ExtResource("9_np1m0")
+[node name="Background105" type="Sprite2D" parent="ag1"]
+z_index = 1
+position = Vector2(0, -4)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(64, 34, 31, 29)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ag1"]
 shape = SubResource("RectangleShape2D_8ec07")
@@ -1639,9 +1651,13 @@ script = ExtResource("12_0l2hq")
 scene_name = "res://scenes/world/garden.tscn"
 anomaly_id = "gg"
 
-[node name="Sprite2D" type="Sprite2D" parent="ag2"]
-scale = Vector2(0.147626, 0.17265)
-texture = ExtResource("9_np1m0")
+[node name="Background105" type="Sprite2D" parent="ag2"]
+z_index = 1
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(124, -2, 46, 31)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ag2"]
+position = Vector2(-4, 3.5)
 shape = SubResource("RectangleShape2D_8ec07")

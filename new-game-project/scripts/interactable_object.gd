@@ -1,7 +1,7 @@
 extends Area2D
 
 @onready var label = $Label  
-
+var acount=GameManager.anomalies_found
 var normal_messages = ["Hmm, just as yesterday.", "Looks exactly the same.", "Nothing changed here."]
 var anomaly_messages = [
 	["That looks... strange.", "Something feels off.", "I don't remember it like this."], 
@@ -17,6 +17,8 @@ var anomaly_messages = [
 var day_variable = 0  
 
 func _ready():
+	if GameManager.day==0:
+		self.visible=false
 	# 50% chance of this being an anomaly
 	if randf() < 0.5:
 		set_anomaly()

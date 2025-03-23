@@ -20,7 +20,7 @@ func complete_task():
 	ClockManager.advance_time()  # Move time forward
 	trash_task_completed.emit()  # Notify other systems
 
-func reset_trash():
+func reset_task():
 	trash_count = 0
 	for trash in trash_items:
 		trash.show()  # Make trash visible again

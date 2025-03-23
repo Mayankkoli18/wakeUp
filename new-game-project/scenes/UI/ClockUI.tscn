@@ -1,18 +1,31 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0dj8xo6r7nvc"]
+[gd_scene load_steps=6 format=3 uid="uid://d0dj8xo6r7nvc"]
 
 [ext_resource type="Script" uid="uid://cdlj0sbgxet3d" path="res://scripts/ClockUI.gd" id="1_mts8n"]
+[ext_resource type="FontFile" uid="uid://fi4f00g8lump" path="res://assets/font/aa.ttf" id="2_vxk8h"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_mts8n"]
 font_size = 61
 font_color = Color(0, 0, 0, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_lomi7"]
+line_spacing = 30.95
+font = ExtResource("2_vxk8h")
+font_size = 56
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_vxk8h"]
+line_spacing = 13.21
+font = ExtResource("2_vxk8h")
+font_size = 31
+font_color = Color(0, 0, 0, 1)
+
 [node name="ClockUi" type="Control" groups=["tasks"]]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_mts8n")
 
 [node name="ClockLabel" type="Label" parent="."]
+visible = false
 modulate = Color(0, 0, 0, 1)
 layout_mode = 0
 offset_left = 774.0
@@ -21,3 +34,39 @@ offset_right = 1112.0
 offset_bottom = 601.0
 text = "aaa"
 label_settings = SubResource("LabelSettings_mts8n")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 414.0
+offset_top = 549.0
+offset_right = 984.0
+offset_bottom = 601.0
+text = "30/12/2025"
+label_settings = SubResource("LabelSettings_lomi7")
+
+[node name="Label2" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 101.0
+offset_top = 77.0
+offset_right = 1333.0
+offset_bottom = 362.0
+text = "1.water the dead patches next to house
+pick garbage from garden
+Buy cat food
+feed the cat
+sit by lake"
+label_settings = SubResource("LabelSettings_lomi7")
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 231.0
+offset_right = 406.0
+offset_bottom = 333.0
+text = "1.water the dead patches next to house
+pick garbage from garden
+Buy cat food
+feed the cat
+sit by lake"
+label_settings = SubResource("LabelSettings_vxk8h")

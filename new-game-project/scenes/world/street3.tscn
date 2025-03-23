@@ -223,27 +223,31 @@ offset_bottom = 1.0
 
 [node name="as31" type="Area2D" parent="."]
 z_index = 135
-position = Vector2(1050, 296)
+position = Vector2(1080, 240)
+scale = Vector2(1.5513, 1.59975)
 script = ExtResource("7_cecpb")
 scene_name = "res://scenes/world/street3.tscn"
 anomaly_id = "s"
 
 [node name="Sprite2D" type="Sprite2D" parent="as31"]
-scale = Vector2(0.147626, 0.17265)
-texture = ExtResource("4_xpr4e")
+scale = Vector2(0.677537, 0.766367)
+texture = ExtResource("4_27mwf")
+region_enabled = true
+region_rect = Rect2(0, 0, 31, 28)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="as31"]
 shape = SubResource("RectangleShape2D_27mwf")
 
 [node name="as32" type="Area2D" parent="."]
 z_index = 135
-position = Vector2(1049, 394)
+position = Vector2(744, 336)
 script = ExtResource("7_cecpb")
 scene_name = "res://scenes/world/street3.tscn"
 anomaly_id = "ss"
 
 [node name="Sprite2D" type="Sprite2D" parent="as32"]
-scale = Vector2(0.147626, 0.17265)
+modulate = Color(0, 0, 0, 1)
+scale = Vector2(0.295252, 0.318039)
 texture = ExtResource("4_xpr4e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="as32"]
