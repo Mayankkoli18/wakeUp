@@ -14,35 +14,10 @@ signal day_started  # Notify other scripts when the day resets
 
 #dd
 
-# 🚀 Called when player enters the bed area
-func start_sleep_cycle():
-	if anomalies_found > 0:  # If an anomaly was discovered today
-		show_discrepancy_effect()
-	else:
-		begin_normal_sleep()
 var i=0
 # 🚨 Show discrepancy sprite first
-func show_discrepancy_effect():
-	discrepancy_sprite.visible = true
-	sleep_label.visible = true
-	sleep_label.text = "Something feels... off."
 
-	await get_tree().create_timer(3.0).timeout  # Wait for 3 seconds
 
-	discrepancy_sprite.visible = false  # Hide discrepancy sprite
-	sleep_label.visible = false
-
-	begin_normal_sleep()
-
-# 😴 Normal sleep transition
-func begin_normal_sleep():
-	sleep_sprite.visible = true
-	sleep_sprite.modulate.a = 0  # Start transparent
-	sleep_sprite.modulate.a = 1  # Fade in effect
-	await get_tree().create_timer(3.0).timeout  # Wait for 3 seconds
-
-	sleep_sprite.visible = false
-	next_day()
 
 # 🌞 Move to next day
 func next_day():
@@ -66,6 +41,7 @@ func anomaly_found(scene_name):
 var resett=false
 # ✅ Reset tasks for the new day
 func reset_tasks():
+	TaskManager.completed_tasks.clear()
 	if get_tree():
 		get_tree().call_group("tasks", "reset_task") 
 	else:

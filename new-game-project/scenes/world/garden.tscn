@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://i2facsgb6wbv"]
+[gd_scene load_steps=27 format=3 uid="uid://i2facsgb6wbv"]
 
 [ext_resource type="Texture2D" uid="uid://bxfouy8wkprpg" path="res://assets/world/screenshot (3).png" id="1_3nnvf"]
 [ext_resource type="Texture2D" uid="uid://b2il3ie4k4rdo" path="res://assets/world/tree.png" id="1_dywpw"]
@@ -16,6 +16,7 @@
 [ext_resource type="Script" uid="uid://olexumjpkkp3" path="res://scripts/interactable_object.gd" id="12_0l2hq"]
 [ext_resource type="Texture2D" uid="uid://c3ejp4y40yqlh" path="res://assets/world/trash/oldmagazine.png" id="12_t7q8v"]
 [ext_resource type="Texture2D" uid="uid://c8vib1u346f8x" path="res://assets/world/trash/patchwork.png" id="13_jkcbh"]
+[ext_resource type="FontFile" uid="uid://fi4f00g8lump" path="res://assets/font/aa.ttf" id="17_gl55c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ry7dn"]
 size = Vector2(161.5, 698)
@@ -37,6 +38,14 @@ size = Vector2(62, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ec07"]
 size = Vector2(46, 27)
+
+[sub_resource type="LabelSettings" id="LabelSettings_nnonp"]
+font = ExtResource("17_gl55c")
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fm7sl"]
+font = ExtResource("17_gl55c")
+font_color = Color(0, 0, 0, 1)
 
 [node name="Street1" type="Node2D"]
 
@@ -1644,6 +1653,13 @@ region_rect = Rect2(64, 34, 31, 29)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ag1"]
 shape = SubResource("RectangleShape2D_8ec07")
 
+[node name="Label" type="Label" parent="ag1"]
+offset_left = -27.0
+offset_top = 19.0
+offset_right = 13.0
+offset_bottom = 42.0
+label_settings = SubResource("LabelSettings_nnonp")
+
 [node name="ag2" type="Area2D" parent="."]
 z_index = 135
 position = Vector2(921, 530)
@@ -1661,3 +1677,10 @@ region_rect = Rect2(124, -2, 46, 31)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ag2"]
 position = Vector2(-4, 3.5)
 shape = SubResource("RectangleShape2D_8ec07")
+
+[node name="Label" type="Label" parent="ag2"]
+offset_left = -48.0
+offset_top = 20.0
+offset_right = -8.0
+offset_bottom = 43.0
+label_settings = SubResource("LabelSettings_fm7sl")

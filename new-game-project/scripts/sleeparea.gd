@@ -8,6 +8,14 @@ extends Area2D
 @export var SleepSprite5 : Sprite2D
 @export var game_manager : Node  # Reference to GameManager
 
+func _ready() -> void:
+	SleepSprite2.visible=false
+	SleepSprite3.visible=false
+	SleepSprite4.visible=false
+	SleepSprite5.visible=false
+	SleepSprite6.visible=false
+	SleepSprite1.visible=false
+
 func _on_body_entered(body):
 	if body.name == "Player" and TaskManager.is_task_completed("sit_by_lake"):
 		print("Player is sleeping...")

@@ -10,7 +10,8 @@ func complete_task(task_name):
 	print(current_task_index)
 	if task_name == task_order[current_task_index]:  # Only complete if it's the correct task
 		completed_tasks.append(task_name)
-		current_task_index += 1  # Move to the next task
+		if current_task_index<task_order.size()-1:
+			current_task_index += 1  # Move to the next task
 		print(completed_tasks)
 		ClockManager.advance_time()  # Move time forward
 		task_completed.emit()  # Notify other systems

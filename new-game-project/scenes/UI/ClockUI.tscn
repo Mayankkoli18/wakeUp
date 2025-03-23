@@ -59,14 +59,16 @@ sit by lake"
 label_settings = SubResource("LabelSettings_lomi7")
 
 [node name="Label3" type="Label" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 53.0
 offset_top = 231.0
 offset_right = 406.0
 offset_bottom = 333.0
-text = "1.water the dead patches next to house
-pick garbage from garden
-Buy cat food
-feed the cat
-sit by lake"
+text = "1.water the dead patches .next to house
+2.pick garbage from garden
+3.Buy cat food
+4.feed the cat
+5.sit by lake
+6.Go Back to bed"
 label_settings = SubResource("LabelSettings_vxk8h")

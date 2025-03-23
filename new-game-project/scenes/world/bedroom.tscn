@@ -326,9 +326,8 @@ WAKE UP MORI"
 label_settings = SubResource("LabelSettings_8y2jb")
 
 [node name="SleepSprite2" type="Sprite2D" parent="GameManager"]
-visible = false
 z_index = 50
-position = Vector2(383, 249)
+position = Vector2(376, 249)
 texture = ExtResource("10_52odb")
 
 [node name="ColorRect" type="ColorRect" parent="GameManager/SleepSprite2"]
@@ -462,10 +461,10 @@ offset_bottom = 172.0
 color = Color(0, 0, 0, 1)
 
 [node name="Label6" type="Label" parent="GameManager/SleepSprite7"]
-offset_left = -923.0
-offset_top = -291.0
-offset_right = 597.0
-offset_bottom = -100.0
+offset_left = -954.0
+offset_top = -290.0
+offset_right = 566.0
+offset_bottom = -15.0
 text = "I remember now. i created this dream.
 a perfect dream where i could never fail a task
 a dream where i could never mess up

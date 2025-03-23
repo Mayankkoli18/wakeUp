@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dg62ptwtksq1i"]
+[gd_scene load_steps=9 format=3 uid="uid://dg62ptwtksq1i"]
 
 [ext_resource type="Texture2D" uid="uid://bxfouy8wkprpg" path="res://assets/world/screenshot (3).png" id="1_l8mg3"]
 [ext_resource type="PackedScene" uid="uid://5tkxetqwyvuy" path="res://scenes/world/player.tscn" id="2_gcvoi"]
 [ext_resource type="Script" uid="uid://dcbr2fjb3vyj6" path="res://scripts/sceneTransition.gd" id="3_gcvoi"]
 [ext_resource type="PackedScene" uid="uid://d0dj8xo6r7nvc" path="res://scenes/UI/ClockUI.tscn" id="4_51hbm"]
+[ext_resource type="Texture2D" uid="uid://c5el0wi78x2k5" path="res://assets/world/house and outdoor decorations/HOUSE 2 - DAY.png" id="5_8o5nt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ry7dn"]
 size = Vector2(145, 698)
@@ -12,7 +13,7 @@ size = Vector2(145, 698)
 size = Vector2(1232, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_51hbm"]
-size = Vector2(20, 322)
+size = Vector2(20, 177)
 
 [node name="Street1" type="Node2D"]
 
@@ -134,8 +135,15 @@ script = ExtResource("3_gcvoi")
 target_scene = "res://scenes/world/petshop.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2(6, -20)
+position = Vector2(53, -27.5)
 shape = SubResource("RectangleShape2D_51hbm")
 
 [node name="ClockUi" parent="." instance=ExtResource("4_51hbm")]
 z_index = 175
+
+[node name="House2-Day" type="Sprite2D" parent="."]
+z_index = 125
+position = Vector2(33, 291)
+rotation = -1.56074
+scale = Vector2(-3, 3.2963)
+texture = ExtResource("5_8o5nt")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c8mcev5wiogpt"]
+[gd_scene load_steps=20 format=3 uid="uid://c8mcev5wiogpt"]
 
 [ext_resource type="Texture2D" uid="uid://bxfouy8wkprpg" path="res://assets/world/screenshot (3).png" id="1_i33fh"]
 [ext_resource type="Texture2D" uid="uid://oj77dfmtirv6" path="res://assets/world/house and outdoor decorations/Background.png" id="2_h8r6p"]
@@ -10,7 +10,8 @@
 [ext_resource type="Script" uid="uid://dcbr2fjb3vyj6" path="res://scripts/sceneTransition.gd" id="8_l3khs"]
 [ext_resource type="PackedScene" uid="uid://d0dj8xo6r7nvc" path="res://scenes/UI/ClockUI.tscn" id="9_dpwqf"]
 [ext_resource type="Script" uid="uid://olexumjpkkp3" path="res://scripts/interactable_object.gd" id="10_57stc"]
-[ext_resource type="Texture2D" uid="uid://bfidf0jvxdpxy" path="res://assets/sprites/playerSpriteSheet.png" id="11_57stc"]
+[ext_resource type="Texture2D" uid="uid://bfidf0jvxdpxy" path="res://assets/font/sprites/playerSpriteSheet.png" id="11_57stc"]
+[ext_resource type="FontFile" uid="uid://fi4f00g8lump" path="res://assets/font/aa.ttf" id="11_k0x8r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nhwmj"]
 size = Vector2(76, 20)
@@ -24,6 +25,13 @@ size = Vector2(145, 698)
 size = Vector2(1232, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u1q3f"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_u1q3f"]
+font = ExtResource("11_k0x8r")
+
+[sub_resource type="LabelSettings" id="LabelSettings_b5be8"]
+font = ExtResource("11_k0x8r")
+font_color = Color(0, 0, 0, 1)
 
 [node name="Lake" type="Node2D"]
 
@@ -468,6 +476,14 @@ texture = ExtResource("2_h8r6p")
 region_enabled = true
 region_rect = Rect2(0, -1, 32, 64)
 
+[node name="Label" type="Label" parent="al1"]
+offset_left = -68.5463
+offset_top = 10.4561
+offset_right = -28.5463
+offset_bottom = 33.4561
+scale = Vector2(0.486542, 0.458003)
+label_settings = SubResource("LabelSettings_u1q3f")
+
 [node name="al2" type="Area2D" parent="."]
 z_index = 135
 position = Vector2(733, 585)
@@ -484,6 +500,14 @@ region_rect = Rect2(70, 6, 20, 25)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="al2"]
 shape = SubResource("RectangleShape2D_u1q3f")
+
+[node name="Label" type="Label" parent="al2"]
+offset_left = -2.375
+offset_top = -36.6353
+offset_right = 37.625
+offset_bottom = -13.6353
+scale = Vector2(0.556829, 0.55074)
+label_settings = SubResource("LabelSettings_b5be8")
 
 [connection signal="body_entered" from="TilesetB/Area2D" to="TilesetB/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="TilesetB2/Area2D" to="TilesetB2/Area2D" method="_on_body_entered"]

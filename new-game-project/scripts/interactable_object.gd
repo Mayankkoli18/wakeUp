@@ -17,14 +17,17 @@ var anomaly_messages = [
 var day_variable = 0  
 
 func _ready():
+	print(GameManager.day)
 	if GameManager.day==0:
 		self.visible=false
-	# 50% chance of this being an anomaly
+	
 	if randf() < 0.5:
 		set_anomaly()
 	else:
 		self.visible=false
 		is_anomaly = false  # Reset anomaly
+
+
 
 func set_anomaly():
 	is_anomaly = true

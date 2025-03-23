@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bxfupxmmcnwut"]
+[gd_scene load_steps=20 format=3 uid="uid://bxfupxmmcnwut"]
 
 [ext_resource type="Texture2D" uid="uid://bxfouy8wkprpg" path="res://assets/world/screenshot (3).png" id="1_8jvfg"]
 [ext_resource type="PackedScene" uid="uid://5tkxetqwyvuy" path="res://scenes/world/player.tscn" id="2_r15wo"]
@@ -8,6 +8,8 @@
 [ext_resource type="Script" uid="uid://futsnu754cq4" path="res://scripts/dog.gd" id="5_y4ghf"]
 [ext_resource type="PackedScene" uid="uid://d0dj8xo6r7nvc" path="res://scenes/UI/ClockUI.tscn" id="6_kua2d"]
 [ext_resource type="Script" uid="uid://olexumjpkkp3" path="res://scripts/interactable_object.gd" id="7_cecpb"]
+[ext_resource type="Texture2D" uid="uid://cf4ejmx6x2f5k" path="res://assets/world/pet shop/food.png" id="8_t1u4c"]
+[ext_resource type="FontFile" uid="uid://fi4f00g8lump" path="res://assets/font/aa.ttf" id="9_lhypk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ry7dn"]
 size = Vector2(145, 698)
@@ -36,6 +38,14 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y4ghf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27mwf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_52k13"]
+font = ExtResource("9_lhypk")
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_glnls"]
+font = ExtResource("9_lhypk")
+font_color = Color(0, 0, 0, 1)
 
 [node name="Street1" type="Node2D"]
 
@@ -224,19 +234,27 @@ offset_bottom = 1.0
 [node name="as31" type="Area2D" parent="."]
 z_index = 135
 position = Vector2(1080, 240)
-scale = Vector2(1.5513, 1.59975)
+scale = Vector2(5.22721, 4.84924)
 script = ExtResource("7_cecpb")
 scene_name = "res://scenes/world/street3.tscn"
 anomaly_id = "s"
 
 [node name="Sprite2D" type="Sprite2D" parent="as31"]
 scale = Vector2(0.677537, 0.766367)
-texture = ExtResource("4_27mwf")
+texture = ExtResource("8_t1u4c")
 region_enabled = true
-region_rect = Rect2(0, 0, 31, 28)
+region_rect = Rect2(0, 0, 14, 13)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="as31"]
+scale = Vector2(0.650943, 0.744361)
 shape = SubResource("RectangleShape2D_27mwf")
+
+[node name="Label" type="Label" parent="as31"]
+offset_left = -36.7309
+offset_top = -44.5431
+offset_right = 3.2691
+offset_bottom = -21.5431
+label_settings = SubResource("LabelSettings_52k13")
 
 [node name="as32" type="Area2D" parent="."]
 z_index = 135
@@ -252,3 +270,10 @@ texture = ExtResource("4_xpr4e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="as32"]
 shape = SubResource("RectangleShape2D_27mwf")
+
+[node name="Label" type="Label" parent="as32"]
+offset_left = -32.0
+offset_top = -88.0
+offset_right = 8.0
+offset_bottom = -65.0
+label_settings = SubResource("LabelSettings_glnls")

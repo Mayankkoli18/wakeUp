@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://c45ih8g0ym82s"]
+[gd_scene load_steps=28 format=3 uid="uid://c45ih8g0ym82s"]
 
 [ext_resource type="PackedScene" uid="uid://5tkxetqwyvuy" path="res://scenes/world/player.tscn" id="1_1dulc"]
 [ext_resource type="Texture2D" uid="uid://dbysor012q526" path="res://assets/world/pet shop/Character/cat-white-idle.png" id="2_tymok"]
@@ -6,7 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://d0dj8xo6r7nvc" path="res://scenes/UI/ClockUI.tscn" id="3_rs1fv"]
 [ext_resource type="Script" uid="uid://dcbr2fjb3vyj6" path="res://scripts/sceneTransition.gd" id="5_rs1fv"]
 [ext_resource type="Script" uid="uid://olexumjpkkp3" path="res://scripts/interactable_object.gd" id="6_fmkfa"]
+[ext_resource type="Texture2D" uid="uid://cidb5xgfmlacf" path="res://assets/world/tileset_B.png" id="6_tymok"]
 [ext_resource type="Texture2D" uid="uid://cgy8a7npk358k" path="res://assets/world/pet shop/furniture-2.png" id="8_al6xc"]
+[ext_resource type="FontFile" uid="uid://fi4f00g8lump" path="res://assets/font/aa.ttf" id="9_al6xc"]
 [ext_resource type="Texture2D" uid="uid://dm5qthw4yj4yd" path="res://assets/world/pet shop/furniture.png" id="9_wep76"]
 [ext_resource type="Texture2D" uid="uid://c66jbgnjqtla3" path="res://assets/world/pet shop/tilemap.png" id="10_ferr8"]
 [ext_resource type="Texture2D" uid="uid://qophnlf3mtw3" path="res://assets/world/pet shop/cat-in-a-box.png" id="11_v7gtw"]
@@ -27,7 +29,17 @@ size = Vector2(145, 698)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gr7y8"]
 size = Vector2(1232, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tdkec"]
+size = Vector2(54, 175.003)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tymok"]
+size = Vector2(203, 183)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ltg5f"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wep76"]
+font = ExtResource("9_al6xc")
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2tswe"]
 atlas = ExtResource("11_v7gtw")
@@ -57,6 +69,10 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ferr8"]
+font = ExtResource("9_al6xc")
+font_color = Color(0, 0, 0, 1)
 
 [node name="Petshop" type="Node2D"]
 
@@ -126,6 +142,31 @@ shape = SubResource("RectangleShape2D_gr7y8")
 position = Vector2(576, 672)
 shape = SubResource("RectangleShape2D_gr7y8")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/StaticBody2D"]
+position = Vector2(501, 117.5)
+shape = SubResource("RectangleShape2D_tdkec")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D/StaticBody2D"]
+position = Vector2(687, 117.5)
+shape = SubResource("RectangleShape2D_tdkec")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D/StaticBody2D"]
+position = Vector2(599.505, 164.002)
+rotation = 1.572
+shape = SubResource("RectangleShape2D_tdkec")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D/StaticBody2D"]
+position = Vector2(157.5, 349)
+shape = SubResource("RectangleShape2D_tymok")
+
+[node name="bed12" type="Sprite2D" parent="Area2D/StaticBody2D/CollisionShape2D4"]
+z_index = 1
+position = Vector2(447.5, 252)
+scale = Vector2(1.10476, 1.06407)
+texture = ExtResource("6_tymok")
+region_enabled = true
+region_rect = Rect2(299.053, 148.16, 74.3049, 42.0593)
+
 [node name="ap1" type="Area2D" parent="."]
 z_index = 135
 position = Vector2(925, 414)
@@ -142,6 +183,13 @@ scale = Vector2(0.761194, 0.859223)
 texture = ExtResource("8_al6xc")
 region_enabled = true
 region_rect = Rect2(176, 128, 134, 103)
+
+[node name="Label" type="Label" parent="ap1"]
+offset_left = -44.0
+offset_top = -83.0
+offset_right = -4.0
+offset_bottom = -60.0
+label_settings = SubResource("LabelSettings_wep76")
 
 [node name="ap2" type="Area2D" parent="."]
 z_index = 135
@@ -161,6 +209,14 @@ frame_progress = 0.134747
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ap2"]
 shape = SubResource("RectangleShape2D_ltg5f")
+
+[node name="Label" type="Label" parent="ap2"]
+offset_left = -30.1529
+offset_top = -23.024
+offset_right = 9.84715
+offset_bottom = -0.023983
+scale = Vector2(0.530142, 0.461302)
+label_settings = SubResource("LabelSettings_ferr8")
 
 [node name="env" type="Node" parent="."]
 

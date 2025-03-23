@@ -1,0 +1,94 @@
+[gd_scene load_steps=6 format=3 uid="uid://cxbtvlbjswppl"]
+
+[ext_resource type="FontFile" uid="uid://fi4f00g8lump" path="res://assets/font/aa.ttf" id="1_n2iux"]
+[ext_resource type="Script" uid="uid://b0e7c7vm3eqfc" path="res://scenes/world/play.gd" id="1_wo77j"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wo77j"]
+font = ExtResource("1_n2iux")
+font_size = 81
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_e1ttn"]
+line_spacing = 9.39
+font = ExtResource("1_n2iux")
+font_size = 25
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_r76jv"]
+font = ExtResource("1_n2iux")
+font_size = 56
+font_color = Color(0, 0, 0, 1)
+
+[node name="Tutorials" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wo77j")
+
+[node name="one" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="ColorRect" type="ColorRect" parent="one"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Label" type="Label" parent="one"]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 56.0
+offset_right = 1110.0
+offset_bottom = 129.0
+text = "Welcome to Mori's dream"
+label_settings = SubResource("LabelSettings_wo77j")
+
+[node name="Label2" type="Label" parent="one"]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 145.0
+offset_right = 101.0
+offset_bottom = 168.0
+scale = Vector2(1.68527, 1.28851)
+text = "Who's mori? You are
+Use WASD to move
+Mouse click to interact with pretty much
+ anything
+Press E to see your daily task and do them
+ in the given order.
+once you task is done go back to sleep
+Make sure you dont loose focus
+you might be seeing something you haven't 
+seen before
+And remeber if you see anything sus interact
+with it
+
+-yours truly"
+label_settings = SubResource("LabelSettings_e1ttn")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = 215
+layout_mode = 0
+offset_left = 1090.0
+offset_top = 548.0
+offset_right = 1098.0
+offset_bottom = 556.0
+scale = Vector2(-23.7941, 9.50461)
+
+[node name="Label" type="Label" parent="."]
+z_index = 215
+layout_mode = 0
+offset_left = 936.0
+offset_top = 564.0
+offset_right = 1070.0
+offset_bottom = 595.0
+scale = Vector2(1.09745, 1.08961)
+text = "PLAY"
+label_settings = SubResource("LabelSettings_r76jv")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
