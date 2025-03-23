@@ -20,6 +20,10 @@ func next_day():
 		random_object.set_anomaly()  # Set it as an anomaly
 
 	print("Day:", day, "Anomalies so far:", anomaly_count)
+func reset_tasks():
+	$WateringSpot.show()  # Show WateringSpot again
+	$WateringUI.reset_ui()  # Reset plant buttons for the next day
+	get_node("res://scenes/world/garden.tscn").reset_trash()
 func _process(delta):
 	if Input.is_action_just_pressed("dd"):
 		next_day()

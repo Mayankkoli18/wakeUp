@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0dj8xo6r7nvc"]
+
+[ext_resource type="Script" uid="uid://cdlj0sbgxet3d" path="res://scripts/ClockUI.gd" id="1_mts8n"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mts8n"]
+font_size = 61
+font_color = Color(0, 0, 0, 1)
+
+[node name="ClockUi" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_mts8n")
+
+[node name="ClockLabel" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 774.0
+offset_top = 512.0
+offset_right = 1112.0
+offset_bottom = 601.0
+text = "aaa"
+label_settings = SubResource("LabelSettings_mts8n")

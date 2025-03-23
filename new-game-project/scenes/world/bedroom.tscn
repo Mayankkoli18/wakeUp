@@ -1,9 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://cla88q472xxkr"]
+[gd_scene load_steps=18 format=3 uid="uid://ts0v6gljlddb"]
 
 [ext_resource type="Texture2D" uid="uid://bxfouy8wkprpg" path="res://assets/world/screenshot (3).png" id="1_fiy5q"]
 [ext_resource type="Texture2D" uid="uid://cidb5xgfmlacf" path="res://assets/world/tileset_B.png" id="2_y07vu"]
 [ext_resource type="PackedScene" uid="uid://5tkxetqwyvuy" path="res://scenes/world/player.tscn" id="3_uuiwg"]
 [ext_resource type="Texture2D" uid="uid://c1bxjwcm0vsta" path="res://assets/world/tileset_C.png" id="4_8y2jb"]
+[ext_resource type="PackedScene" uid="uid://d0dj8xo6r7nvc" path="res://scenes/UI/ClockUI.tscn" id="5_y07vu"]
+[ext_resource type="Script" uid="uid://dcbr2fjb3vyj6" path="res://scripts/sceneTransition.gd" id="6_uuiwg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fiy5q"]
 size = Vector2(86.8964, 84.74)
@@ -35,8 +37,8 @@ size = Vector2(145, 698)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7nisn"]
 size = Vector2(1232, 20)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_p1byb"]
-size = Vector2(66, 34)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fmvv5"]
+size = Vector2(78, 48)
 
 [node name="Bedroom" type="Node2D"]
 
@@ -249,10 +251,19 @@ shape = SubResource("RectangleShape2D_7nisn")
 position = Vector2(576, 672)
 shape = SubResource("RectangleShape2D_7nisn")
 
-[node name="CollisionShape2D14" type="CollisionShape2D" parent="env"]
-position = Vector2(567, 623)
-shape = SubResource("RectangleShape2D_p1byb")
-
-[node name="Player" parent="." instance=ExtResource("3_uuiwg")]
+[node name="Player" parent="." groups=["player"] instance=ExtResource("3_uuiwg")]
 z_index = 2
 position = Vector2(368, 320)
+
+[node name="ClockUi" parent="." instance=ExtResource("5_y07vu")]
+z_index = 2
+
+[node name="nextscene" type="Area2D" parent="."]
+z_index = 1
+position = Vector2(566, 631)
+script = ExtResource("6_uuiwg")
+target_scene = "res://scenes/world/house.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="nextscene"]
+position = Vector2(1, -3)
+shape = SubResource("RectangleShape2D_fmvv5")

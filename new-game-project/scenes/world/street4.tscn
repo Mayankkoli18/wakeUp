@@ -1,0 +1,141 @@
+[gd_scene load_steps=8 format=3 uid="uid://dg62ptwtksq1i"]
+
+[ext_resource type="Texture2D" uid="uid://bxfouy8wkprpg" path="res://assets/world/screenshot (3).png" id="1_l8mg3"]
+[ext_resource type="PackedScene" uid="uid://5tkxetqwyvuy" path="res://scenes/world/player.tscn" id="2_gcvoi"]
+[ext_resource type="Script" uid="uid://dcbr2fjb3vyj6" path="res://scripts/sceneTransition.gd" id="3_gcvoi"]
+[ext_resource type="PackedScene" uid="uid://d0dj8xo6r7nvc" path="res://scenes/UI/ClockUI.tscn" id="4_51hbm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ry7dn"]
+size = Vector2(145, 698)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5uw0f"]
+size = Vector2(1232, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_51hbm"]
+size = Vector2(20, 322)
+
+[node name="Street1" type="Node2D"]
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node"]
+position = Vector2(577, 325)
+scale = Vector2(28.9, 20.3125)
+texture = ExtResource("1_l8mg3")
+region_enabled = true
+region_rect = Rect2(207, 192, 40, 32)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Node"]
+modulate = Color(0.572988, 0.572988, 0.572988, 1)
+position = Vector2(146.371, 337.852)
+scale = Vector2(43.8941, 96.8996)
+texture = ExtResource("1_l8mg3")
+region_enabled = true
+region_rect = Rect2(168, 127, 7, 7)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Node"]
+modulate = Color(0.572988, 0.572988, 0.572988, 1)
+z_index = 1
+position = Vector2(272, 260.255)
+rotation = -1.5708
+scale = Vector2(13.6753, 3.64317)
+texture = ExtResource("1_l8mg3")
+region_enabled = true
+region_rect = Rect2(310, 114, 28, 15)
+
+[node name="Sprite2D13" type="Sprite2D" parent="Node"]
+modulate = Color(0.572988, 0.572988, 0.572988, 1)
+z_index = 1
+position = Vector2(707.815, 425.01)
+rotation = 3.14117
+scale = Vector2(32.3447, 3.64317)
+texture = ExtResource("1_l8mg3")
+region_enabled = true
+region_rect = Rect2(310, 114, 28, 15)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Node"]
+modulate = Color(0.572988, 0.572988, 0.572988, 1)
+position = Vector2(733.129, 24.5)
+scale = Vector2(124.323, 12.7143)
+texture = ExtResource("1_l8mg3")
+region_enabled = true
+region_rect = Rect2(168, 127, 7, 7)
+
+[node name="Sprite2D11" type="Sprite2D" parent="Node"]
+modulate = Color(0.572988, 0.572988, 0.572988, 1)
+position = Vector2(579.759, 530.648)
+scale = Vector2(165.783, 37.8995)
+texture = ExtResource("1_l8mg3")
+region_enabled = true
+region_rect = Rect2(168, 127, 7, 7)
+
+[node name="Sprite2D7" type="Sprite2D" parent="Node"]
+position = Vector2(497.712, 265.582)
+scale = Vector2(4.67019, 1.95082)
+texture = ExtResource("1_l8mg3")
+region_enabled = true
+region_rect = Rect2(346, 89, 26, 17)
+
+[node name="Sprite2D8" type="Sprite2D" parent="Node"]
+position = Vector2(690.712, 265.582)
+scale = Vector2(4.67019, 1.95082)
+texture = ExtResource("1_l8mg3")
+region_enabled = true
+region_rect = Rect2(346, 89, 26, 17)
+
+[node name="Sprite2D9" type="Sprite2D" parent="Node"]
+position = Vector2(876.712, 265.582)
+scale = Vector2(4.67019, 1.95082)
+texture = ExtResource("1_l8mg3")
+region_enabled = true
+region_rect = Rect2(346, 89, 26, 17)
+
+[node name="Sprite2D10" type="Sprite2D" parent="Node"]
+position = Vector2(1062.71, 261.582)
+scale = Vector2(4.67019, 1.95082)
+texture = ExtResource("1_l8mg3")
+region_enabled = true
+region_rect = Rect2(346, 89, 26, 17)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node"]
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Node/StaticBody2D"]
+position = Vector2(-40, 336)
+shape = SubResource("RectangleShape2D_ry7dn")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Node/StaticBody2D"]
+position = Vector2(1224, 336)
+shape = SubResource("RectangleShape2D_ry7dn")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Node/StaticBody2D"]
+position = Vector2(576, -8)
+shape = SubResource("RectangleShape2D_5uw0f")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Node/StaticBody2D"]
+position = Vector2(576, 672)
+shape = SubResource("RectangleShape2D_5uw0f")
+
+[node name="Player" parent="." instance=ExtResource("2_gcvoi")]
+z_index = 3
+position = Vector2(583, 78)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1119, 258)
+script = ExtResource("3_gcvoi")
+target_scene = "res://scenes/world/street3.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(6, -20)
+shape = SubResource("RectangleShape2D_51hbm")
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2(118, 248)
+script = ExtResource("3_gcvoi")
+target_scene = "res://scenes/world/petshop.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(6, -20)
+shape = SubResource("RectangleShape2D_51hbm")
+
+[node name="ClockUi" parent="." instance=ExtResource("4_51hbm")]
+z_index = 175

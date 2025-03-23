@@ -1,0 +1,81 @@
+[gd_scene load_steps=10 format=3 uid="uid://c45ih8g0ym82s"]
+
+[ext_resource type="PackedScene" uid="uid://5tkxetqwyvuy" path="res://scenes/world/player.tscn" id="1_1dulc"]
+[ext_resource type="Texture2D" uid="uid://cymjode0admq7" path="res://icon.svg" id="2_m66gv"]
+[ext_resource type="Script" uid="uid://3lehoggt3i0y" path="res://scripts/cashier.gd" id="3_m66gv"]
+[ext_resource type="PackedScene" uid="uid://d0dj8xo6r7nvc" path="res://scenes/UI/ClockUI.tscn" id="3_rs1fv"]
+[ext_resource type="Script" uid="uid://dcbr2fjb3vyj6" path="res://scripts/sceneTransition.gd" id="5_rs1fv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rs1fv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fmkfa"]
+size = Vector2(932, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_84yie"]
+size = Vector2(145, 698)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gr7y8"]
+size = Vector2(1232, 20)
+
+[node name="Petshop" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_1dulc")]
+position = Vector2(300, 228)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 542.0
+offset_top = 170.0
+offset_right = 636.0
+offset_bottom = 193.0
+scale = Vector2(1.35403, 1.48199)
+text = "THE USUAL?"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(600, 91)
+texture = ExtResource("2_m66gv")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D" node_paths=PackedStringArray("store_ui_label")]
+script = ExtResource("3_m66gv")
+store_ui_label = NodePath("../../Control/Label")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+scale = Vector2(6.30596, 6.1945)
+shape = SubResource("RectangleShape2D_rs1fv")
+
+[node name="ClockUi" parent="." instance=ExtResource("3_rs1fv")]
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(251, 615)
+script = ExtResource("5_rs1fv")
+target_scene = "res://scenes/world/street4.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(456, 0)
+scale = Vector2(1.52274, 3.88298)
+shape = SubResource("RectangleShape2D_fmkfa")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Area2D"]
+position = Vector2(-261, -622)
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Area2D/StaticBody2D"]
+position = Vector2(-40, 336)
+shape = SubResource("RectangleShape2D_84yie")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Area2D/StaticBody2D"]
+position = Vector2(1224, 336)
+shape = SubResource("RectangleShape2D_84yie")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Area2D/StaticBody2D"]
+position = Vector2(576, -8)
+shape = SubResource("RectangleShape2D_gr7y8")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Area2D/StaticBody2D"]
+position = Vector2(576, 672)
+shape = SubResource("RectangleShape2D_gr7y8")

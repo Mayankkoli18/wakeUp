@@ -1,0 +1,171 @@
+[gd_scene load_steps=9 format=3 uid="uid://b3vdjfnlbd05d"]
+
+[ext_resource type="Texture2D" uid="uid://bxfouy8wkprpg" path="res://assets/world/screenshot (3).png" id="1_hf0qi"]
+[ext_resource type="PackedScene" uid="uid://5tkxetqwyvuy" path="res://scenes/world/player.tscn" id="2_slt4x"]
+[ext_resource type="PackedScene" uid="uid://d0dj8xo6r7nvc" path="res://scenes/UI/ClockUI.tscn" id="3_6kiam"]
+[ext_resource type="Script" uid="uid://dcbr2fjb3vyj6" path="res://scripts/sceneTransition.gd" id="3_slt4x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ry7dn"]
+size = Vector2(145, 698)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5uw0f"]
+size = Vector2(1232, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6kiam"]
+size = Vector2(412, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rkupa"]
+size = Vector2(20, 272)
+
+[node name="Street1" type="Node2D"]
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node"]
+position = Vector2(577, 330)
+scale = Vector2(28.9, 20.625)
+texture = ExtResource("1_hf0qi")
+region_enabled = true
+region_rect = Rect2(207, 192, 40, 32)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Node"]
+modulate = Color(0.572988, 0.572988, 0.572988, 1)
+position = Vector2(949.259, 583.297)
+rotation = 3.14159
+scale = Vector2(60.3597, 29.5134)
+texture = ExtResource("1_hf0qi")
+region_enabled = true
+region_rect = Rect2(168, 127, 7, 7)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Node"]
+modulate = Color(0.572988, 0.572988, 0.572988, 1)
+position = Vector2(946, 509)
+rotation = 3.14159
+scale = Vector2(14.9603, 3.64317)
+texture = ExtResource("1_hf0qi")
+region_enabled = true
+region_rect = Rect2(310, 114, 28, 15)
+
+[node name="Sprite2D12" type="Sprite2D" parent="Node"]
+modulate = Color(0.572988, 0.572988, 0.572988, 1)
+z_index = 1
+position = Vector2(955, 170)
+scale = Vector2(14.9603, 3.64317)
+texture = ExtResource("1_hf0qi")
+region_enabled = true
+region_rect = Rect2(310, 114, 28, 15)
+
+[node name="Sprite2D13" type="Sprite2D" parent="Node"]
+modulate = Color(0.572988, 0.572988, 0.572988, 1)
+z_index = 1
+position = Vector2(301, 316.354)
+rotation = -1.5708
+scale = Vector2(26.0324, 3.64317)
+texture = ExtResource("1_hf0qi")
+region_enabled = true
+region_rect = Rect2(310, 114, 28, 15)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Node"]
+modulate = Color(0.572988, 0.572988, 0.572988, 1)
+position = Vector2(956.518, 94.297)
+scale = Vector2(60.3597, 29.5134)
+texture = ExtResource("1_hf0qi")
+region_enabled = true
+region_rect = Rect2(168, 127, 7, 7)
+
+[node name="Sprite2D11" type="Sprite2D" parent="Node"]
+modulate = Color(0.572988, 0.572988, 0.572988, 1)
+position = Vector2(146.5, 317.5)
+scale = Vector2(53, 102.143)
+texture = ExtResource("1_hf0qi")
+region_enabled = true
+region_rect = Rect2(168, 127, 7, 7)
+
+[node name="Sprite2D6" type="Sprite2D" parent="Node"]
+position = Vector2(528.582, 158.712)
+rotation = 1.5708
+scale = Vector2(4.67019, 1.95082)
+texture = ExtResource("1_hf0qi")
+region_enabled = true
+region_rect = Rect2(346, 89, 26, 17)
+
+[node name="Sprite2D7" type="Sprite2D" parent="Node"]
+position = Vector2(529.582, 344.712)
+rotation = 1.5708
+scale = Vector2(4.67019, 1.95082)
+texture = ExtResource("1_hf0qi")
+region_enabled = true
+region_rect = Rect2(346, 89, 26, 17)
+
+[node name="Sprite2D8" type="Sprite2D" parent="Node"]
+position = Vector2(528, 549)
+rotation = 1.5708
+scale = Vector2(4.67019, 1.95082)
+texture = ExtResource("1_hf0qi")
+region_enabled = true
+region_rect = Rect2(346, 89, 26, 17)
+
+[node name="Sprite2D9" type="Sprite2D" parent="Node"]
+position = Vector2(857, 336)
+scale = Vector2(4.67019, 1.95082)
+texture = ExtResource("1_hf0qi")
+region_enabled = true
+region_rect = Rect2(346, 89, 26, 17)
+
+[node name="Sprite2D10" type="Sprite2D" parent="Node"]
+position = Vector2(1057, 339)
+scale = Vector2(4.67019, 1.95082)
+texture = ExtResource("1_hf0qi")
+region_enabled = true
+region_rect = Rect2(346, 89, 26, 17)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node"]
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Node/StaticBody2D"]
+position = Vector2(-40, 336)
+shape = SubResource("RectangleShape2D_ry7dn")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Node/StaticBody2D"]
+position = Vector2(1224, 336)
+shape = SubResource("RectangleShape2D_ry7dn")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Node/StaticBody2D"]
+position = Vector2(576, -8)
+shape = SubResource("RectangleShape2D_5uw0f")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Node/StaticBody2D"]
+position = Vector2(576, 672)
+shape = SubResource("RectangleShape2D_5uw0f")
+
+[node name="Player" parent="." instance=ExtResource("2_slt4x")]
+z_index = 5
+position = Vector2(1101, 325)
+
+[node name="ClockUi" parent="." instance=ExtResource("3_6kiam")]
+z_index = 478
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(544, 39)
+script = ExtResource("3_slt4x")
+target_scene = "res://scenes/world/street3.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-6, -24)
+shape = SubResource("RectangleShape2D_6kiam")
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2(525, 635)
+script = ExtResource("3_slt4x")
+target_scene = "res://scenes/world/lake.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(-6, -24)
+shape = SubResource("RectangleShape2D_6kiam")
+
+[node name="Area2D3" type="Area2D" parent="."]
+position = Vector2(1137, 333)
+script = ExtResource("3_slt4x")
+target_scene = "res://scenes/world/street1.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+shape = SubResource("RectangleShape2D_rkupa")

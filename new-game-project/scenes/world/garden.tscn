@@ -1,0 +1,1616 @@
+[gd_scene load_steps=18 format=3 uid="uid://i2facsgb6wbv"]
+
+[ext_resource type="Texture2D" uid="uid://bxfouy8wkprpg" path="res://assets/world/screenshot (3).png" id="1_3nnvf"]
+[ext_resource type="Texture2D" uid="uid://b2il3ie4k4rdo" path="res://assets/world/tree.png" id="1_dywpw"]
+[ext_resource type="Texture2D" uid="uid://dvki73e5owcb8" path="res://assets/world/fences.png" id="2_4asl3"]
+[ext_resource type="PackedScene" uid="uid://5tkxetqwyvuy" path="res://scenes/world/player.tscn" id="2_pbgp1"]
+[ext_resource type="Texture2D" uid="uid://cfl8n7aruhays" path="res://assets/world/tree_small.png" id="5_j0bv2"]
+[ext_resource type="Texture2D" uid="uid://oj77dfmtirv6" path="res://assets/world/house and outdoor decorations/Background.png" id="6_gc4fa"]
+[ext_resource type="Script" uid="uid://dtqye78sb3jge" path="res://scripts/trashManager.gd" id="7_d2die"]
+[ext_resource type="Script" uid="uid://cxkxawoiansah" path="res://scripts/trash.gd" id="8_hjpdx"]
+[ext_resource type="Texture2D" uid="uid://cymjode0admq7" path="res://icon.svg" id="9_np1m0"]
+[ext_resource type="PackedScene" uid="uid://d0dj8xo6r7nvc" path="res://scenes/UI/ClockUI.tscn" id="10_hjpdx"]
+[ext_resource type="Script" uid="uid://dcbr2fjb3vyj6" path="res://scripts/sceneTransition.gd" id="11_np1m0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ry7dn"]
+size = Vector2(161.5, 698)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5uw0f"]
+size = Vector2(1232, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dywpw"]
+size = Vector2(1076, 93)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j0bv2"]
+size = Vector2(475.5, 200.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0l2hq"]
+size = Vector2(30, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gppj7"]
+size = Vector2(62, 20)
+
+[node name="Street1" type="Node2D"]
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Tree2" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(63, 22)
+scale = Vector2(1.6797, 1.6797)
+texture = ExtResource("1_dywpw")
+
+[node name="Tree3" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(121, 22)
+scale = Vector2(1.6797, 1.6797)
+texture = ExtResource("1_dywpw")
+
+[node name="Tree4" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(175.434, 22)
+scale = Vector2(1.6797, 1.6797)
+texture = ExtResource("1_dywpw")
+
+[node name="Tree5" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(233.434, 22)
+scale = Vector2(1.6797, 1.6797)
+texture = ExtResource("1_dywpw")
+
+[node name="Tree6" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(284.434, 22)
+scale = Vector2(1.6797, 1.6797)
+texture = ExtResource("1_dywpw")
+
+[node name="Tree7" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(342.434, 22)
+scale = Vector2(1.6797, 1.6797)
+texture = ExtResource("1_dywpw")
+
+[node name="Tree8" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(396.868, 22)
+scale = Vector2(1.6797, 1.6797)
+texture = ExtResource("1_dywpw")
+
+[node name="Tree9" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(454.868, 22)
+scale = Vector2(1.6797, 1.6797)
+texture = ExtResource("1_dywpw")
+
+[node name="Tree10" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(507.434, 22)
+scale = Vector2(1.6797, 1.6797)
+texture = ExtResource("1_dywpw")
+
+[node name="Tree11" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(565.434, 22)
+scale = Vector2(1.6797, 1.6797)
+texture = ExtResource("1_dywpw")
+
+[node name="Tree12" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(619.868, 22)
+scale = Vector2(1.6797, 1.6797)
+texture = ExtResource("1_dywpw")
+
+[node name="Tree13" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(677.868, 22)
+scale = Vector2(1.6797, 1.6797)
+texture = ExtResource("1_dywpw")
+
+[node name="Tree14" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(728.868, 22)
+scale = Vector2(1.6797, 1.6797)
+texture = ExtResource("1_dywpw")
+
+[node name="Tree15" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(786.868, 22)
+scale = Vector2(1.6797, 1.6797)
+texture = ExtResource("1_dywpw")
+
+[node name="Tree16" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(841.302, 22)
+scale = Vector2(1.6797, 1.6797)
+texture = ExtResource("1_dywpw")
+
+[node name="Tree17" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(905, 22)
+scale = Vector2(1.6797, 1.6797)
+texture = ExtResource("1_dywpw")
+
+[node name="Tree18" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(968.434, 22)
+scale = Vector2(1.6797, 1.6797)
+texture = ExtResource("1_dywpw")
+
+[node name="Tree19" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(1026.43, 22)
+scale = Vector2(1.6797, 1.6797)
+texture = ExtResource("1_dywpw")
+
+[node name="Tree20" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(1080.87, 22)
+scale = Vector2(1.6797, 1.6797)
+texture = ExtResource("1_dywpw")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node"]
+position = Vector2(577, 325)
+scale = Vector2(28.9, 20.3125)
+texture = ExtResource("1_3nnvf")
+region_enabled = true
+region_rect = Rect2(207, 192, 40, 32)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node"]
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Node/StaticBody2D"]
+position = Vector2(-40, 336)
+shape = SubResource("RectangleShape2D_ry7dn")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Node/StaticBody2D"]
+position = Vector2(1188, 336)
+shape = SubResource("RectangleShape2D_ry7dn")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Node/StaticBody2D"]
+position = Vector2(576, -8)
+shape = SubResource("RectangleShape2D_5uw0f")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Node/StaticBody2D"]
+position = Vector2(576, 672)
+shape = SubResource("RectangleShape2D_5uw0f")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Node/StaticBody2D"]
+position = Vector2(1220, 614)
+shape = SubResource("RectangleShape2D_5uw0f")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Node/StaticBody2D"]
+position = Vector2(-78, 614)
+shape = SubResource("RectangleShape2D_5uw0f")
+
+[node name="Fences" type="Sprite2D" parent="Node"]
+position = Vector2(-501, 492)
+texture = ExtResource("2_4asl3")
+
+[node name="Fences2" type="Sprite2D" parent="Node"]
+position = Vector2(30, 572)
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences16" type="Sprite2D" parent="Node"]
+position = Vector2(72, 610)
+rotation = -1.5708
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences17" type="Sprite2D" parent="Node"]
+position = Vector2(157, 610)
+rotation = -1.5708
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences18" type="Sprite2D" parent="Node"]
+position = Vector2(240.168, 610)
+rotation = -1.5708
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences19" type="Sprite2D" parent="Node"]
+position = Vector2(325.168, 610)
+rotation = -1.5708
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences20" type="Sprite2D" parent="Node"]
+position = Vector2(821.168, 610)
+rotation = -1.5708
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences21" type="Sprite2D" parent="Node"]
+position = Vector2(906.168, 610)
+rotation = -1.5708
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences24" type="Sprite2D" parent="Node"]
+position = Vector2(652.168, 610)
+rotation = -1.5708
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences25" type="Sprite2D" parent="Node"]
+position = Vector2(737.168, 610)
+rotation = -1.5708
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences26" type="Sprite2D" parent="Node"]
+position = Vector2(405.168, 610)
+rotation = -1.5708
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences27" type="Sprite2D" parent="Node"]
+position = Vector2(490.168, 610)
+rotation = -1.5708
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences22" type="Sprite2D" parent="Node"]
+position = Vector2(989.336, 610)
+rotation = -1.5708
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences23" type="Sprite2D" parent="Node"]
+position = Vector2(1074.34, 610)
+rotation = -1.5708
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences28" type="Sprite2D" parent="Node"]
+position = Vector2(72, 21.3065)
+rotation = -1.5708
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences29" type="Sprite2D" parent="Node"]
+position = Vector2(157, 21.3065)
+rotation = -1.5708
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences30" type="Sprite2D" parent="Node"]
+position = Vector2(240.168, 21.3065)
+rotation = -1.5708
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences31" type="Sprite2D" parent="Node"]
+position = Vector2(325.168, 21.3065)
+rotation = -1.5708
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences32" type="Sprite2D" parent="Node"]
+position = Vector2(821.168, 21.3065)
+rotation = -1.5708
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences33" type="Sprite2D" parent="Node"]
+position = Vector2(906.168, 21.3065)
+rotation = -1.5708
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences34" type="Sprite2D" parent="Node"]
+position = Vector2(652.168, 21.3065)
+rotation = -1.5708
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences35" type="Sprite2D" parent="Node"]
+position = Vector2(737.168, 21.3065)
+rotation = -1.5708
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences36" type="Sprite2D" parent="Node"]
+position = Vector2(405.168, 21.3065)
+rotation = -1.5708
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences37" type="Sprite2D" parent="Node"]
+position = Vector2(490.168, 21.3065)
+rotation = -1.5708
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences40" type="Sprite2D" parent="Node"]
+position = Vector2(570, 21.3065)
+rotation = -1.5708
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences38" type="Sprite2D" parent="Node"]
+position = Vector2(989.336, 21.3065)
+rotation = -1.5708
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences39" type="Sprite2D" parent="Node"]
+position = Vector2(1074.34, 21.3065)
+rotation = -1.5708
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences3" type="Sprite2D" parent="Node"]
+position = Vector2(30, 487)
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences4" type="Sprite2D" parent="Node"]
+position = Vector2(30, 403)
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences5" type="Sprite2D" parent="Node"]
+position = Vector2(30, 321)
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences6" type="Sprite2D" parent="Node"]
+position = Vector2(30, 237)
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences7" type="Sprite2D" parent="Node"]
+position = Vector2(30, 153)
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences8" type="Sprite2D" parent="Node"]
+position = Vector2(30, 66)
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences9" type="Sprite2D" parent="Node"]
+position = Vector2(1119.31, 572)
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences10" type="Sprite2D" parent="Node"]
+position = Vector2(1119.31, 487)
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences11" type="Sprite2D" parent="Node"]
+position = Vector2(1119.31, 403)
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences12" type="Sprite2D" parent="Node"]
+position = Vector2(1119.31, 321)
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences13" type="Sprite2D" parent="Node"]
+position = Vector2(1119.31, 237)
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences14" type="Sprite2D" parent="Node"]
+position = Vector2(1119.31, 153)
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="Fences15" type="Sprite2D" parent="Node"]
+position = Vector2(1119.31, 66)
+scale = Vector2(1.88441, 1.88441)
+texture = ExtResource("2_4asl3")
+region_enabled = true
+region_rect = Rect2(-2, -5, 12, 49)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Node"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/StaticBody2D2"]
+position = Vector2(569, 68.5)
+shape = SubResource("RectangleShape2D_dywpw")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node/StaticBody2D2"]
+position = Vector2(283, 376)
+shape = SubResource("RectangleShape2D_j0bv2")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Node/StaticBody2D2"]
+position = Vector2(854, 376)
+shape = SubResource("RectangleShape2D_j0bv2")
+
+[node name="TreeSmall" type="Sprite2D" parent="Node"]
+position = Vector2(-337, 301)
+texture = ExtResource("5_j0bv2")
+
+[node name="TreeSmall2" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(92, 72)
+scale = Vector2(1.96346, 1.96346)
+texture = ExtResource("5_j0bv2")
+region_enabled = true
+region_rect = Rect2(22, 0, 27, 35)
+
+[node name="TreeSmall3" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(55, 72)
+scale = Vector2(1.96346, 1.96346)
+texture = ExtResource("5_j0bv2")
+region_enabled = true
+region_rect = Rect2(22, 0, 27, 35)
+
+[node name="TreeSmall4" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(166.507, 72)
+scale = Vector2(1.96346, 1.96346)
+texture = ExtResource("5_j0bv2")
+region_enabled = true
+region_rect = Rect2(22, 0, 27, 35)
+
+[node name="TreeSmall5" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(129.507, 72)
+scale = Vector2(1.96346, 1.96346)
+texture = ExtResource("5_j0bv2")
+region_enabled = true
+region_rect = Rect2(22, 0, 27, 35)
+
+[node name="TreeSmall6" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(240.507, 72)
+scale = Vector2(1.96346, 1.96346)
+texture = ExtResource("5_j0bv2")
+region_enabled = true
+region_rect = Rect2(22, 0, 27, 35)
+
+[node name="TreeSmall7" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(203.507, 72)
+scale = Vector2(1.96346, 1.96346)
+texture = ExtResource("5_j0bv2")
+region_enabled = true
+region_rect = Rect2(22, 0, 27, 35)
+
+[node name="TreeSmall8" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(315.013, 72)
+scale = Vector2(1.96346, 1.96346)
+texture = ExtResource("5_j0bv2")
+region_enabled = true
+region_rect = Rect2(22, 0, 27, 35)
+
+[node name="TreeSmall9" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(278.013, 72)
+scale = Vector2(1.96346, 1.96346)
+texture = ExtResource("5_j0bv2")
+region_enabled = true
+region_rect = Rect2(22, 0, 27, 35)
+
+[node name="TreeSmall10" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(385.507, 72)
+scale = Vector2(1.96346, 1.96346)
+texture = ExtResource("5_j0bv2")
+region_enabled = true
+region_rect = Rect2(22, 0, 27, 35)
+
+[node name="TreeSmall11" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(348.507, 72)
+scale = Vector2(1.96346, 1.96346)
+texture = ExtResource("5_j0bv2")
+region_enabled = true
+region_rect = Rect2(22, 0, 27, 35)
+
+[node name="TreeSmall12" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(460.013, 72)
+scale = Vector2(1.96346, 1.96346)
+texture = ExtResource("5_j0bv2")
+region_enabled = true
+region_rect = Rect2(22, 0, 27, 35)
+
+[node name="TreeSmall13" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(423.013, 72)
+scale = Vector2(1.96346, 1.96346)
+texture = ExtResource("5_j0bv2")
+region_enabled = true
+region_rect = Rect2(22, 0, 27, 35)
+
+[node name="TreeSmall14" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(534.013, 72)
+scale = Vector2(1.96346, 1.96346)
+texture = ExtResource("5_j0bv2")
+region_enabled = true
+region_rect = Rect2(22, 0, 27, 35)
+
+[node name="TreeSmall15" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(497.013, 72)
+scale = Vector2(1.96346, 1.96346)
+texture = ExtResource("5_j0bv2")
+region_enabled = true
+region_rect = Rect2(22, 0, 27, 35)
+
+[node name="TreeSmall16" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(608.52, 72)
+scale = Vector2(1.96346, 1.96346)
+texture = ExtResource("5_j0bv2")
+region_enabled = true
+region_rect = Rect2(22, 0, 27, 35)
+
+[node name="TreeSmall17" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(571.52, 72)
+scale = Vector2(1.96346, 1.96346)
+texture = ExtResource("5_j0bv2")
+region_enabled = true
+region_rect = Rect2(22, 0, 27, 35)
+
+[node name="TreeSmall18" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(677.507, 72)
+scale = Vector2(1.96346, 1.96346)
+texture = ExtResource("5_j0bv2")
+region_enabled = true
+region_rect = Rect2(22, 0, 27, 35)
+
+[node name="TreeSmall19" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(640.507, 72)
+scale = Vector2(1.96346, 1.96346)
+texture = ExtResource("5_j0bv2")
+region_enabled = true
+region_rect = Rect2(22, 0, 27, 35)
+
+[node name="TreeSmall20" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(752.013, 72)
+scale = Vector2(1.96346, 1.96346)
+texture = ExtResource("5_j0bv2")
+region_enabled = true
+region_rect = Rect2(22, 0, 27, 35)
+
+[node name="TreeSmall21" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(715.013, 72)
+scale = Vector2(1.96346, 1.96346)
+texture = ExtResource("5_j0bv2")
+region_enabled = true
+region_rect = Rect2(22, 0, 27, 35)
+
+[node name="TreeSmall22" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(826.013, 72)
+scale = Vector2(1.96346, 1.96346)
+texture = ExtResource("5_j0bv2")
+region_enabled = true
+region_rect = Rect2(22, 0, 27, 35)
+
+[node name="TreeSmall23" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(789.013, 72)
+scale = Vector2(1.96346, 1.96346)
+texture = ExtResource("5_j0bv2")
+region_enabled = true
+region_rect = Rect2(22, 0, 27, 35)
+
+[node name="TreeSmall24" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(900.52, 72)
+scale = Vector2(1.96346, 1.96346)
+texture = ExtResource("5_j0bv2")
+region_enabled = true
+region_rect = Rect2(22, 0, 27, 35)
+
+[node name="TreeSmall25" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(863.52, 72)
+scale = Vector2(1.96346, 1.96346)
+texture = ExtResource("5_j0bv2")
+region_enabled = true
+region_rect = Rect2(22, 0, 27, 35)
+
+[node name="TreeSmall29" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(1050, 72)
+scale = Vector2(1.96346, 1.96346)
+texture = ExtResource("5_j0bv2")
+region_enabled = true
+region_rect = Rect2(22, 0, 27, 35)
+
+[node name="TreeSmall26" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(938.507, 72)
+scale = Vector2(1.96346, 1.96346)
+texture = ExtResource("5_j0bv2")
+region_enabled = true
+region_rect = Rect2(22, 0, 27, 35)
+
+[node name="TreeSmall27" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(1013.01, 72)
+scale = Vector2(1.96346, 1.96346)
+texture = ExtResource("5_j0bv2")
+region_enabled = true
+region_rect = Rect2(22, 0, 27, 35)
+
+[node name="TreeSmall28" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(976.014, 72)
+scale = Vector2(1.96346, 1.96346)
+texture = ExtResource("5_j0bv2")
+region_enabled = true
+region_rect = Rect2(22, 0, 27, 35)
+
+[node name="Tree" type="Sprite2D" parent="Node"]
+position = Vector2(-411, 449)
+texture = ExtResource("1_dywpw")
+
+[node name="Background" type="Sprite2D" parent="Node"]
+position = Vector2(-543, 95)
+texture = ExtResource("6_gc4fa")
+
+[node name="Background32" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(79, 311)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(-2, -10, 34, 74)
+
+[node name="Background33" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(134, 311)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(-2, -10, 34, 74)
+
+[node name="Background34" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(188, 311)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(-2, -10, 34, 74)
+
+[node name="Background35" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(244, 311)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(-2, -10, 34, 74)
+
+[node name="Background36" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(305, 311)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(-2, -10, 34, 74)
+
+[node name="Background37" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(360, 311)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(-2, -10, 34, 74)
+
+[node name="Background38" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(417, 311)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(-2, -10, 34, 74)
+
+[node name="Background39" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(108.84, 388.24)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(-2, -10, 34, 74)
+
+[node name="Background46" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(59, 388.24)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(-2, -10, 34, 74)
+
+[node name="Background40" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(163.84, 388.24)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(-2, -10, 34, 74)
+
+[node name="Background41" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(217.84, 388.24)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(-2, -10, 34, 74)
+
+[node name="Background42" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(273.84, 388.24)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(-2, -10, 34, 74)
+
+[node name="Background43" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(334.84, 388.24)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(-2, -10, 34, 74)
+
+[node name="Background44" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(389.84, 388.24)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(-2, -10, 34, 74)
+
+[node name="Background45" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(446.84, 388.24)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(-2, -10, 34, 74)
+
+[node name="Background47" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(705.84, 311)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(-2, -10, 34, 74)
+
+[node name="Background48" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(760.84, 311)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(-2, -10, 34, 74)
+
+[node name="Background49" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(814.84, 311)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(-2, -10, 34, 74)
+
+[node name="Background50" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(870.84, 311)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(-2, -10, 34, 74)
+
+[node name="Background51" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(931.84, 311)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(-2, -10, 34, 74)
+
+[node name="Background52" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(986.84, 311)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(-2, -10, 34, 74)
+
+[node name="Background53" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(1043.84, 311)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(-2, -10, 34, 74)
+
+[node name="Background54" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(735.68, 388.24)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(-2, -10, 34, 74)
+
+[node name="Background55" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(685.84, 388.24)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(-2, -10, 34, 74)
+
+[node name="Background62" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(633, 286)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(64, 34, 31, 29)
+
+[node name="Background63" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(633, 322)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(64, 34, 31, 29)
+
+[node name="Background64" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(633, 357)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(64, 34, 31, 29)
+
+[node name="Background65" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(633, 397)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(64, 34, 31, 29)
+
+[node name="Background66" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(633, 435)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(64, 34, 31, 29)
+
+[node name="Background72" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(453, 451)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(124, -2, 46, 31)
+
+[node name="Background88" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(331, 514)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(97, 41, 30, 21)
+
+[node name="Background89" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(407, 554)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(97, 41, 30, 21)
+
+[node name="Background90" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(462, 501)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(97, 41, 30, 21)
+
+[node name="Background91" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(281, 564)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(97, 41, 30, 21)
+
+[node name="Background92" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(220, 509)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(97, 41, 30, 21)
+
+[node name="Background93" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(181, 569)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(97, 41, 30, 21)
+
+[node name="Background94" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(89, 566)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(97, 41, 30, 21)
+
+[node name="Background95" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(139, 502)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(97, 41, 30, 21)
+
+[node name="Background96" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(693, 500)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(97, 41, 30, 21)
+
+[node name="Background97" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(748, 563)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(97, 41, 30, 21)
+
+[node name="Background98" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(801, 502)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(97, 41, 30, 21)
+
+[node name="Background99" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(871, 562)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(97, 41, 30, 21)
+
+[node name="Background100" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(871, 503)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(97, 41, 30, 21)
+
+[node name="Background101" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(1060, 553)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(97, 41, 30, 21)
+
+[node name="Background102" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(1029, 501)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(97, 41, 30, 21)
+
+[node name="Background103" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(968, 540)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(97, 41, 30, 21)
+
+[node name="Background104" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(968, 540)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(97, 41, 30, 21)
+
+[node name="Background73" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(400, 451)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(124, -2, 46, 31)
+
+[node name="Background74" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(346, 451)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(124, -2, 46, 31)
+
+[node name="Background75" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(290, 451)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(124, -2, 46, 31)
+
+[node name="Background76" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(232, 451)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(124, -2, 46, 31)
+
+[node name="Background77" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(175, 451)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(124, -2, 46, 31)
+
+[node name="Background78" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(120, 451)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(124, -2, 46, 31)
+
+[node name="Background79" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(64, 451)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(124, -2, 46, 31)
+
+[node name="Background80" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(1075.96, 451)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(124, -2, 46, 31)
+
+[node name="Background81" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(1022.96, 451)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(124, -2, 46, 31)
+
+[node name="Background82" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(968.96, 451)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(124, -2, 46, 31)
+
+[node name="Background83" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(912.96, 451)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(124, -2, 46, 31)
+
+[node name="Background84" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(854.96, 451)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(124, -2, 46, 31)
+
+[node name="Background85" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(797.96, 451)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(124, -2, 46, 31)
+
+[node name="Background86" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(742.96, 451)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(124, -2, 46, 31)
+
+[node name="Background87" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(686.96, 451)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(124, -2, 46, 31)
+
+[node name="Background67" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(502.56, 286)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(64, 34, 31, 29)
+
+[node name="Background68" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(502.56, 322)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(64, 34, 31, 29)
+
+[node name="Background69" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(502.56, 357)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(64, 34, 31, 29)
+
+[node name="Background70" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(502.56, 397)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(64, 34, 31, 29)
+
+[node name="Background71" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(502.56, 435)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(64, 34, 31, 29)
+
+[node name="Background56" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(790.68, 388.24)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(-2, -10, 34, 74)
+
+[node name="Background57" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(844.68, 388.24)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(-2, -10, 34, 74)
+
+[node name="Background58" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(900.68, 388.24)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(-2, -10, 34, 74)
+
+[node name="Background59" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(961.68, 388.24)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(-2, -10, 34, 74)
+
+[node name="Background60" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(1016.68, 388.24)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(-2, -10, 34, 74)
+
+[node name="Background61" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(1073.68, 388.24)
+scale = Vector2(1.52, 1.52)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(-2, -10, 34, 74)
+
+[node name="Background2" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(87, 169)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(167, 203, 80, 77)
+
+[node name="Background3" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(155, 169)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(167, 203, 80, 77)
+
+[node name="Background4" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(224, 169)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(167, 203, 80, 77)
+
+[node name="Background5" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(292, 169)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(167, 203, 80, 77)
+
+[node name="Background6" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(360, 169)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(167, 203, 80, 77)
+
+[node name="Background7" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(429, 169)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(167, 203, 80, 77)
+
+[node name="Background8" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(499, 169)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(167, 203, 80, 77)
+
+[node name="Background9" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(567, 169)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(167, 203, 80, 77)
+
+[node name="Background10" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(636, 169)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(167, 203, 80, 77)
+
+[node name="Background11" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(704, 169)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(167, 203, 80, 77)
+
+[node name="Background12" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(772, 169)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(167, 203, 80, 77)
+
+[node name="Background13" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(841, 169)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(167, 203, 80, 77)
+
+[node name="Background14" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(911, 169)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(167, 203, 80, 77)
+
+[node name="Background15" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(979, 169)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(167, 203, 80, 77)
+
+[node name="Background16" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(1048, 169)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(167, 203, 80, 77)
+
+[node name="Background17" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(87, 237.5)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(167, 203, 80, 77)
+
+[node name="Background18" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(155, 237.5)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(167, 203, 80, 77)
+
+[node name="Background19" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(224, 237.5)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(167, 203, 80, 77)
+
+[node name="Background20" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(292, 237.5)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(167, 203, 80, 77)
+
+[node name="Background21" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(360, 237.5)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(167, 203, 80, 77)
+
+[node name="Background22" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(429, 237.5)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(167, 203, 80, 77)
+
+[node name="Background23" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(499, 237.5)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(167, 203, 80, 77)
+
+[node name="Background24" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(567, 237.5)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(167, 203, 80, 77)
+
+[node name="Background25" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(636, 237.5)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(167, 203, 80, 77)
+
+[node name="Background26" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(704, 237.5)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(167, 203, 80, 77)
+
+[node name="Background27" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(772, 237.5)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(167, 203, 80, 77)
+
+[node name="Background28" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(841, 237.5)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(167, 203, 80, 77)
+
+[node name="Background29" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(911, 237.5)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(167, 203, 80, 77)
+
+[node name="Background30" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(979, 237.5)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(167, 203, 80, 77)
+
+[node name="Background31" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(1048, 237.5)
+texture = ExtResource("6_gc4fa")
+region_enabled = true
+region_rect = Rect2(167, 203, 80, 77)
+
+[node name="Player" parent="." instance=ExtResource("2_pbgp1")]
+z_index = 5
+position = Vector2(575, 570)
+
+[node name="TrashContainer" type="Node" parent="."]
+script = ExtResource("7_d2die")
+
+[node name="Area2D" type="Area2D" parent="TrashContainer" node_paths=PackedStringArray("task_manager")]
+position = Vector2(386, 512)
+script = ExtResource("8_hjpdx")
+task_manager = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TrashContainer/Area2D"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_0l2hq")
+
+[node name="Sprite2D" type="Sprite2D" parent="TrashContainer/Area2D"]
+position = Vector2(-0.5, 0)
+scale = Vector2(0.242188, 0.234375)
+texture = ExtResource("9_np1m0")
+
+[node name="Area2D2" type="Area2D" parent="TrashContainer" node_paths=PackedStringArray("task_manager")]
+position = Vector2(807, 536)
+script = ExtResource("8_hjpdx")
+task_manager = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TrashContainer/Area2D2"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_0l2hq")
+
+[node name="Sprite2D" type="Sprite2D" parent="TrashContainer/Area2D2"]
+position = Vector2(-0.5, 0)
+scale = Vector2(0.242188, 0.234375)
+texture = ExtResource("9_np1m0")
+
+[node name="Area2D3" type="Area2D" parent="TrashContainer" node_paths=PackedStringArray("task_manager")]
+position = Vector2(970, 504)
+script = ExtResource("8_hjpdx")
+task_manager = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TrashContainer/Area2D3"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_0l2hq")
+
+[node name="Sprite2D" type="Sprite2D" parent="TrashContainer/Area2D3"]
+position = Vector2(-0.5, 0)
+scale = Vector2(0.242188, 0.234375)
+texture = ExtResource("9_np1m0")
+
+[node name="Area2D4" type="Area2D" parent="TrashContainer" node_paths=PackedStringArray("task_manager")]
+position = Vector2(133, 540)
+script = ExtResource("8_hjpdx")
+task_manager = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TrashContainer/Area2D4"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_0l2hq")
+
+[node name="Sprite2D" type="Sprite2D" parent="TrashContainer/Area2D4"]
+position = Vector2(-0.5, 0)
+scale = Vector2(0.242188, 0.234375)
+texture = ExtResource("9_np1m0")
+
+[node name="Area2D5" type="Area2D" parent="TrashContainer" node_paths=PackedStringArray("task_manager")]
+position = Vector2(572, 377)
+script = ExtResource("8_hjpdx")
+task_manager = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TrashContainer/Area2D5"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_0l2hq")
+
+[node name="Sprite2D" type="Sprite2D" parent="TrashContainer/Area2D5"]
+position = Vector2(-0.5, 0)
+scale = Vector2(0.242188, 0.234375)
+texture = ExtResource("9_np1m0")
+
+[node name="ClockUi" parent="." instance=ExtResource("10_hjpdx")]
+z_index = 7
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(572, 629)
+script = ExtResource("11_np1m0")
+target_scene = "res://scenes/world/street1.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_gppj7")

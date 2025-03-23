@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @onready var sprite = $AnimatedSprite2D  # Reference to the animated sprite
 
-const SPEED = 100  # Movement speed
+const SPEED = 1000  # Movement speed
 
 func _process(delta):
 	var direction = Vector2.ZERO
